@@ -1,0 +1,27 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+
+[[plugins]]
+repo = 'zchee/deoplete-go'
+build = 'make'
+
+[[plugins]]
+repo = 'Shougo/denite.nvim'
+
+[[plugins]]
+repo = 'Shougo/vimshell'
+rev = '3787e5'
+

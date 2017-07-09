@@ -26,20 +26,10 @@ set runtimepath+=~/.vim/bundles/repos/github.com/Shougo/dein.vim
 if dein#load_state('~/.vim/bundles')
   call dein#begin('~/.vim/bundles')
 
-  " Let dein manage dein
-  " Required:
-  call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
-
-  " Add or remove your plugins here:
-  call dein#add('Shougo/neosnippet.vim')
-  call dein#add('Shougo/neosnippet-snippets')
-  call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
-  call dein#add('Shougo/deoplete.nvim')
-  call dein#add('zchee/deoplete-go', {'build': 'make'})
-  call dein#add('Shougo/denite.nvim')
-
-  " You can specify revision/branch/tag.
-  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+  let s:toml = '~/.dein.toml'
+  let s:lazy_toml = '~/.dein_lazy.toml'
+  call dein#load_toml(s:toml, {'lazy': 0})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
   " Required:
   call dein#end()
