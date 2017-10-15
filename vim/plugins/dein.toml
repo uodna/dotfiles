@@ -25,3 +25,9 @@ repo = 'Shougo/denite.nvim'
 repo = 'Shougo/vimshell'
 rev = '3787e5'
 
+[[plugins]]
+repo = 'Shougo/neomru.vim'
+
+[[plugins]]
+repo = 'Shougo/neoyank.vim'
+

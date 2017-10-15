@@ -1,0 +1,4 @@
+./vim ~/.vim
+./vim ~/.config/nvim
+./vim/init.vim ~/.vimrc
+
