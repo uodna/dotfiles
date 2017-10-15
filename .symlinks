@@ -2,3 +2,4 @@
 ./vim ~/.config/nvim
 ./vim/init.vim ~/.vimrc
 
+./karabiner ~/.config/karabiner
