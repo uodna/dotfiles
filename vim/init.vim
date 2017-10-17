@@ -17,8 +17,6 @@ set clipboard=unnamed
 " python3 host
 let g:python3_host_prog = expand('~/.pyenv/versions/neovim3/bin/python')
 
-" key mapping
-noremap <silent> <C-p> :<C-u>Denite file_rec<CR>
 
 "dein Scripts-----------------------------
 if &compatible
@@ -58,3 +56,12 @@ if dein#check_install()
 endif
 "End dein Scripts-------------------------
 
+" denite
+call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>')
+call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>')
+call denite#custom#map('normal', '<C-s>', '<denite:do_action:split>')
+call denite#custom#map('insert', '<C-s>', '<denite:do_action:split>')
+call denite#custom#map('normal', '<C-v>', '<denite:do_action:vsplit>')
+call denite#custom#map('insert', '<C-v>', '<denite:do_action:vsplit>')
+
+noremap <silent> <C-p> :<C-u>Denite file_rec<CR>
