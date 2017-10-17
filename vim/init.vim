@@ -14,6 +14,9 @@ set wrapscan "検索時に最後まで行ったら最初に戻る
 "set termguicolors
 set clipboard=unnamed
 
+" python3 host
+let g:python3_host_prog = expand('~/.pyenv/versions/neovim3/bin/python')
+
 " key mapping
 noremap <silent> <C-p> :<C-u>Denite file_rec<CR>
 
