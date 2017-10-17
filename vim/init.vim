@@ -13,6 +13,7 @@ set wrapscan "検索時に最後まで行ったら最初に戻る
 "#####その他設定#####
 "set termguicolors
 set clipboard=unnamed
+set mouse=a
 
 " python3 host
 let g:python3_host_prog = expand('~/.pyenv/versions/neovim3/bin/python')
