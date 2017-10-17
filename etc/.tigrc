@@ -1,0 +1,89 @@
+# 以下参考 http://qiita.com/sfus/items/063797a1dd8fdc7d032f
+
+## 各ビュー設定
+
+# main view の左端にコミットIDを表示する
+# set main-view = id date author:email-user commit-title:graph=yes,refs=yes
+# set main-view = date:default  id:yes  author:full commit-title:graph=v2
+set main-view = id date author commit-title:graph=yes,refs=yes
+
+# blame view の行数表示をON、intervalを1に
+set blame-view  = date:default author:email-user id:yes,color line-number:yes,interval=1 text
+
+# Pager系の行数表示をON、intervalを1に (default: line-number:no,interval=5)
+set pager-view  = line-number:yes,interval=1 text
+set stage-view  = line-number:yes,interval=1 text
+set log-view    = line-number:yes,interval=1 text
+set blob-view   = line-number:yes,interval=1 text
+set diff-view   = line-number:yes,interval=1 text:yes,commit-title-overflow=no
+
+## その他の設定
+
+# # 画面を垂直方向に分割する
+# set vertical-split = yes
+#
+# 横分割に強制する
+set vertical-split = no
+#
+# # デフォルト値
+# set vertical-split = auto
+
+# utf-8 文字で画面描画する (~でトグル)
+# set line-graphics = utf-8
+set line-graphics = default
+
+# タブサイズ
+set tab-size = 4
+
+# # 空白無視
+# set ignore-space = all
+
+# 空白無視 (status-view では表示するが diff-view では無視する) (W でトグル)
+set ignore-space = at-eol
+
+# 検索時に大文字小文字を無視する (default: false)
+set ignore-case = true
+
+# 水平分割したウィンドウの下画面サイズを % で指定（行数指定も可）
+set split-view-height = 80%
+
+# マージ diff を表示する
+set diff-options = -m --first-parent
+
+# マウスを有効にする
+set mouse = false
+
+# '+行数' の形で Editor に行番号を引数として渡すか
+set editor-line-number = yes
+
+# リフレッシュするタイミング
+set refresh-mode = auto
+#set refresh-mode = after-command
+#set refresh-mode = periodic
+#set refresh-interval = 1
+
+# H で reset --hard
+bind main    H      ?git reset --hard %(commit)
+bind diff    H      ?git reset --hard %(commit)
+bind refs    H      ?git reset --hard %(branch)
+
+# H で reset --hard HEAD (status-view)
+bind status  H      ?git reset --hard HEAD
+
+## merge/rebase
+
+# R で rebase
+bind main    R      ?git rebase --keep-empty %(branch)
+bind diff    R      ?git rebase --keep-empty %(branch)
+bind refs    R      ?git rebase --keep-empty %(branch)
+bind main    <Esc>r ?git rebase --keep-empty %(commit)
+bind diff    <Esc>r ?git rebase --keep-empty %(commit)
+
+# I で rebase -i
+# bind main    I      ?git rebase -i --keep-empty %(branch)
+# bind diff    I      ?git rebase -i --keep-empty %(branch)
+# bind refs    I      ?git rebase -i --keep-empty %(branch)
+# bind main    <Esc>i ?git rebase -i --keep-empty %(commit)
+# bind diff    <Esc>i ?git rebase -i --keep-empty %(commit)
+bind main    I ?git rebase -i --keep-empty --autosquash %(commit)
+bind diff    I ?git rebase -i --keep-empty --autosquash %(commit)

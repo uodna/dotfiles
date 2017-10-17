@@ -3,3 +3,5 @@
 ./vim/init.vim ~/.vimrc
 
 ./karabiner ~/.config/karabiner
+
+./etc/.tigrc ~/.tigrc
