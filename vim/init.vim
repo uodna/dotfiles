@@ -14,6 +14,7 @@ set wrapscan "検索時に最後まで行ったら最初に戻る
 "set termguicolors
 set clipboard=unnamed
 set mouse=a
+set iskeyword+=-
 let g:mapleader = "\<Space>"
 
 " python3 host
