@@ -3,11 +3,13 @@ set title "編集中のファイル名を表示
 syntax on "コードの色分け
 set tabstop=2 "インデントをスペース2つ分に設定
 set smartindent "オートインデント
+set autoindent
 set number "行番号表示
 set background=dark
 let g:hybrid_custom_term_colors = 1
 let g:hybrid_reduced_contrast = 1
 colorscheme hybrid
+set list
 
 "#####検索設定#####
 set ignorecase "大文字/小文字の区別なく検索する
@@ -65,7 +67,6 @@ if dein#load_state(s:dein_dir)
 endif
 
 filetype plugin indent on
-syntax enable
 
 " Install not installed plugins on startup.
 if dein#check_install()
@@ -117,11 +118,11 @@ call denite#custom#option('default', 'vertical_preview', 1)
 " noremap <silent> <C-p> :<C-u>Denite file_rec<CR>
 map <silent> <Leader>p :<C-u>Denite file_rec/git<CR>
 map <silent> <Leader>f :<C-u>Denite file_rec<CR>
-map <silent> <Leader>b :<C-u>Denite buffer<CR>
-map <silent> <Leader>o :<C-u>Denite -auto-preview file_old<CR>
+map <silent> <Leader>o :<C-u>Denite file_old<CR>
 map <silent> <Leader>g :<C-u>Denite -no-empty grep<CR>
 map <silent> <Leader>a :<C-u>Denite -auto_preview -no-empty grep<CR>
 map <silent> <Leader>r :<C-u>Denite -resume<CR>
 map <silent> <C-h> :<C-u>Denite -resume -immediately -cursor-pos=-1<CR>
 map <silent> <C-l> :<C-u>Denite -resume -immediately -cursor-pos=+1<CR>
-
+map <silent> <Leader>w :<C-u>DeniteCursorWord grep<CR>
+map <silent> <Leader>y :<C-u>Denite neoyank<CR>

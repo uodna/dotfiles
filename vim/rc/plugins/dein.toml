@@ -54,3 +54,7 @@ hook_source = '''
 [[plugins]]
 repo = 'nixprime/cpsm'
 build = 'PY3=ON sh install.sh'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
