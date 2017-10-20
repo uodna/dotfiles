@@ -1,5 +1,7 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
+rtp = ''
+hook_add = 'source ~/.vim/rc/plugins/configs/dein.rc.vim'
 
 [[plugins]]
 repo = 'w0ng/vim-hybrid'
