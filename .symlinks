@@ -3,6 +3,7 @@
 ./vim/init.vim ~/.vimrc
 
 ./karabiner ~/.config/karabiner
+./iterm2 ~/.config/iterm2
 
 ./etc/.tigrc ~/.tigrc
 ./etc/.agignore ~/.agignore
