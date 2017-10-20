@@ -60,3 +60,5 @@ build = 'PY3=ON sh install.sh'
 [[plugins]]
 repo = 'scrooloose/nerdtree'
 
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
