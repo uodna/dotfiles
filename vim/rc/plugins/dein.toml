@@ -2,6 +2,9 @@
 repo = 'Shougo/dein.vim'
 
 [[plugins]]
+repo = 'w0ng/vim-hybrid'
+
+[[plugins]]
 repo = 'Shougo/neosnippet.vim'
 
 [[plugins]]
@@ -20,6 +23,10 @@ build = 'make'
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_source = 'source ~/.vim/rc/plugins/configs/lightline.rc.vim'
 
 [[plugins]]
 repo = 'Shougo/vimshell'
@@ -43,3 +50,7 @@ hook_source = '''
   let g:ale_javascript_prettier_use_local_config = 1
   let g:ale_go_gometalinter_options = '--disable-all --enable=vet --enable=gotype'
 '''
+
+[[plugins]]
+repo = 'nixprime/cpsm'
+build = 'PY3=ON sh install.sh'

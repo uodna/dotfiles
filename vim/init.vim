@@ -4,6 +4,10 @@ syntax on "コードの色分け
 set tabstop=2 "インデントをスペース2つ分に設定
 set smartindent "オートインデント
 set number "行番号表示
+set background=dark
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1
+colorscheme hybrid
 
 "#####検索設定#####
 set ignorecase "大文字/小文字の区別なく検索する
@@ -13,13 +17,23 @@ set wrapscan "検索時に最後まで行ったら最初に戻る
 "#####その他設定#####
 "set termguicolors
 set clipboard=unnamed
-set mouse=a
+"set mouse=a
 set iskeyword+=-
 let g:mapleader = "\<Space>"
 
 " python3 host
 let g:python3_host_prog = expand('~/.pyenv/versions/neovim3/bin/python')
 
+let s:rc_dir = resolve(expand('~/.vim/rc'))
+
+function! s:source_rc(path) abort
+  let l:abspath = resolve(expand(s:rc_dir . '/' . a:path))
+  execute 'source' fnameescape(l:abspath)
+endfunction
+
+augroup MyAutoCmd
+  autocmd!
+augroup END
 
 "dein Scripts-----------------------------
 if &compatible
@@ -42,7 +56,7 @@ endif
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
 
-	let s:toml_dir = resolve(expand('~/.vim/plugins'))
+	let s:toml_dir = expand(s:rc_dir . '/plugins')
   call dein#load_toml(s:toml_dir . '/dein.toml', {'lazy': 0})
   call dein#load_toml(s:toml_dir . '/dein_lazy.toml', {'lazy': 1})
 
@@ -92,9 +106,22 @@ call denite#custom#map('insert', '<C-s>', '<denite:do_action:split>')
 call denite#custom#map('normal', '<C-v>', '<denite:do_action:vsplit>')
 call denite#custom#map('insert', '<C-v>', '<denite:do_action:vsplit>')
 
-noremap <silent> <C-p> :<C-u>Denite file_rec<CR>
+" call denite#custom#source('_', 'matchers', ['matcher_cpsm'])
+call denite#custom#source('_', 'sorters', ['sorter_rank'])
+
+call denite#custom#source('file_old', 'converters', ['converter_relative_word'])
+call denite#custom#source('file_old', 'matchers', ['matcher_project_files', 'matcher_cpsm'])
+
+call denite#custom#option('default', 'vertical_preview', 1)
+
+" noremap <silent> <C-p> :<C-u>Denite file_rec<CR>
 map <silent> <Leader>p :<C-u>Denite file_rec/git<CR>
 map <silent> <Leader>f :<C-u>Denite file_rec<CR>
 map <silent> <Leader>b :<C-u>Denite buffer<CR>
+map <silent> <Leader>o :<C-u>Denite -auto-preview file_old<CR>
 map <silent> <Leader>g :<C-u>Denite -no-empty grep<CR>
+map <silent> <Leader>a :<C-u>Denite -auto_preview -no-empty grep<CR>
+map <silent> <Leader>r :<C-u>Denite -resume<CR>
+map <silent> <C-h> :<C-u>Denite -resume -immediately -cursor-pos=-1<CR>
+map <silent> <C-l> :<C-u>Denite -resume -immediately -cursor-pos=+1<CR>
 

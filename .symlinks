@@ -5,3 +5,4 @@
 ./karabiner ~/.config/karabiner
 
 ./etc/.tigrc ~/.tigrc
+./etc/.agignore ~/.agignore
