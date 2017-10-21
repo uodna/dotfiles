@@ -24,7 +24,7 @@ set iskeyword+=-
 let g:mapleader = "\<Space>"
 
 " python3 host
-let g:python3_host_prog = expand('~/.pyenv/versions/neovim3/bin/python')
+let g:python3_host_prog = $PYENV_ROOT . '/versions/neovim3/bin/python'
 
 let s:rc_dir = resolve(expand('~/.vim/rc'))
 
