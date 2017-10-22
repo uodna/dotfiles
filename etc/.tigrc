@@ -87,3 +87,4 @@ bind diff    <Esc>r ?git rebase --keep-empty %(commit)
 # bind diff    <Esc>i ?git rebase -i --keep-empty %(commit)
 bind main    I ?git rebase -i --keep-empty --autosquash %(commit)
 bind diff    I ?git rebase -i --keep-empty --autosquash %(commit)
+bind main    x !@sh -c "echo %(commit) | pbcopy"
