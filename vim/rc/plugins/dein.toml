@@ -25,6 +25,7 @@ build = 'make'
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
+hook_source = 'source ~/.vim/rc/plugins/configs/denite.rc.vim'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
