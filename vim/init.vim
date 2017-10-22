@@ -89,3 +89,4 @@ vnoremap > >gv
 vnoremap < <gv
 nnoremap <silent> <ESC> :nohlsearch<CR>
 
+map <silent> <Leader>n :<C-u>NERDTreeToggle<CR>
