@@ -28,8 +28,7 @@ repo = 'Shougo/denite.nvim'
 hook_source = 'source ~/.vim/rc/plugins/configs/denite.rc.vim'
 
 [[plugins]]
-repo = 'itchyny/lightline.vim'
-hook_source = 'source ~/.vim/rc/plugins/configs/lightline.rc.vim'
+repo = 'vim-airline/vim-airline'
 
 [[plugins]]
 repo = 'Shougo/vimshell'

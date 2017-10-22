@@ -66,6 +66,7 @@ set background=dark
 set cursorline
 colorscheme tender
 hi Visual guibg=#005f87
+let g:airline_theme = 'tender'
 
 " search
 set ignorecase "大文字/小文字の区別なく検索する
