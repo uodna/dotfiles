@@ -109,7 +109,7 @@ call denite#custom#map('insert', '<C-s>', '<denite:do_action:split>')
 call denite#custom#map('normal', '<C-v>', '<denite:do_action:vsplit>')
 call denite#custom#map('insert', '<C-v>', '<denite:do_action:vsplit>')
 
-" call denite#custom#source('_', 'matchers', ['matcher_cpsm'])
+call denite#custom#source('_', 'matchers', ['matcher_cpsm'])
 call denite#custom#source('_', 'sorters', ['sorter_rank'])
 
 call denite#custom#source('file_old', 'converters', ['converter_relative_word'])
