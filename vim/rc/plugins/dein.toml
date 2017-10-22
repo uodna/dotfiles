@@ -62,3 +62,6 @@ repo = 'scrooloose/nerdtree'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
