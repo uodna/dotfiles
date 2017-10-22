@@ -33,7 +33,7 @@ if &runtimepath !~# '/dein.vim'
 endif
 
 if dein#load_state(s:dein_dir)
-	let s:toml_dir = expand(s:rc_dir . '/plugins')
+  let s:toml_dir = expand(s:rc_dir . '/plugins')
   call dein#begin(s:dein_dir, [expand('<sfile>')] + split(glob(s:toml_dir . '/*.toml'), '\n'))
 
   call dein#load_toml(s:toml_dir . '/dein.toml', {'lazy': 0})
