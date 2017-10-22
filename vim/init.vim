@@ -53,6 +53,29 @@ if has('vim_starting')
   call dein#call_hook('source')
 endif
 
+"#####表示設定#####
+set title "編集中のファイル名を表示
+set tabstop=2 "インデントをスペース2つ分に設定
+set smartindent "オートインデント
+set autoindent
+set number "行番号表示
+set list
+" colors
+syntax on
+set termguicolors
+set background=dark
+colorscheme tender
+
+"#####検索設定#####
+set ignorecase "大文字/小文字の区別なく検索する
+set smartcase "検索文字列に大文字が含まれている場合は区別して検索する
+set wrapscan "検索時に最後まで行ったら最初に戻る
+
+"#####その他設定#####
+set clipboard=unnamed
+"set mouse=a
+set iskeyword+=-
+
 " key mappings
 noremap j gj
 noremap k gk
@@ -105,27 +128,4 @@ map <silent> <C-h> :<C-u>Denite -resume -immediately -cursor-pos=-1<CR>
 map <silent> <C-l> :<C-u>Denite -resume -immediately -cursor-pos=+1<CR>
 map <silent> <Leader>w :<C-u>DeniteCursorWord grep<CR>
 map <silent> <Leader>y :<C-u>Denite neoyank<CR>
-
-"#####表示設定#####
-set title "編集中のファイル名を表示
-set tabstop=2 "インデントをスペース2つ分に設定
-set smartindent "オートインデント
-set autoindent
-set number "行番号表示
-set list
-" colors
-syntax on
-colorscheme tender
-set termguicolors
-set background=dark
-
-"#####検索設定#####
-set ignorecase "大文字/小文字の区別なく検索する
-set smartcase "検索文字列に大文字が含まれている場合は区別して検索する
-set wrapscan "検索時に最後まで行ったら最初に戻る
-
-"#####その他設定#####
-set clipboard=unnamed
-"set mouse=a
-set iskeyword+=-
 
