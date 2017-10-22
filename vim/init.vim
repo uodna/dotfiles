@@ -53,25 +53,26 @@ if has('vim_starting')
   call dein#call_hook('source')
 endif
 
-"#####表示設定#####
-set title "編集中のファイル名を表示
-set tabstop=2 "インデントをスペース2つ分に設定
-set smartindent "オートインデント
+" view
+set title
+set tabstop=2
+set smartindent
 set autoindent
-set number "行番号表示
+set number
 set list
-" colors
 syntax on
 set termguicolors
 set background=dark
+set cursorline
 colorscheme tender
+hi Visual guibg=#005f87
 
-"#####検索設定#####
+" search
 set ignorecase "大文字/小文字の区別なく検索する
 set smartcase "検索文字列に大文字が含まれている場合は区別して検索する
 set wrapscan "検索時に最後まで行ったら最初に戻る
 
-"#####その他設定#####
+" misc
 set clipboard=unnamed
 "set mouse=a
 set iskeyword+=-
@@ -115,12 +116,16 @@ call denite#custom#source('_', 'sorters', ['sorter_rank'])
 call denite#custom#source('file_old', 'converters', ['converter_relative_word'])
 call denite#custom#source('file_old', 'matchers', ['matcher_project_files', 'matcher_cpsm'])
 
+call denite#custom#option('default', 'highlight_mode_insert', 'Visual')
+call denite#custom#option('default', 'highlight_mode_normal', 'Visual')
+call denite#custom#option('default', 'highlight_matched_char', 'Constant')
+call denite#custom#option('default', 'highlight_matched_range', 'Constant')
 call denite#custom#option('default', 'vertical_preview', 1)
 
-" noremap <silent> <C-p> :<C-u>Denite file_rec<CR>
 map <silent> <Leader>p :<C-u>Denite file_rec/git<CR>
 map <silent> <Leader>f :<C-u>Denite file_rec<CR>
 map <silent> <Leader>o :<C-u>Denite file_old<CR>
+map <silent> <Leader>j :<C-u>Denite -immediately -cusor-pos=+1 file_old<CR>
 map <silent> <Leader>g :<C-u>Denite -no-empty grep<CR>
 map <silent> <Leader>a :<C-u>Denite -auto_preview -no-empty grep<CR>
 map <silent> <Leader>r :<C-u>Denite -resume<CR>
