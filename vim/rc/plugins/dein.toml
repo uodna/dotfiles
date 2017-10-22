@@ -4,7 +4,7 @@ rtp = ''
 hook_add = 'source ~/.vim/rc/plugins/configs/dein.rc.vim'
 
 [[plugins]]
-repo = 'w0ng/vim-hybrid'
+repo = 'jacoborus/tender.vim'
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'

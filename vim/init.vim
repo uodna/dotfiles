@@ -1,30 +1,7 @@
-"#####表示設定#####
-set title "編集中のファイル名を表示
-syntax on "コードの色分け
-set tabstop=2 "インデントをスペース2つ分に設定
-set smartindent "オートインデント
-set autoindent
-set number "行番号表示
-set background=dark
-let g:hybrid_custom_term_colors = 1
-let g:hybrid_reduced_contrast = 1
-colorscheme hybrid
-set list
+filetype plugin indent on
 
-"#####検索設定#####
-set ignorecase "大文字/小文字の区別なく検索する
-set smartcase "検索文字列に大文字が含まれている場合は区別して検索する
-set wrapscan "検索時に最後まで行ったら最初に戻る
-
-"#####その他設定#####
-"set termguicolors
-set clipboard=unnamed
-"set mouse=a
-set iskeyword+=-
-let g:mapleader = "\<Space>"
-
-" python3 host
 let g:python3_host_prog = $PYENV_ROOT . '/versions/neovim3/bin/python'
+let g:mapleader = "\<Space>"
 
 let s:rc_dir = resolve(expand('~/.vim/rc'))
 
@@ -56,9 +33,9 @@ if &runtimepath !~# '/dein.vim'
 endif
 
 if dein#load_state(s:dein_dir)
-  call dein#begin(s:dein_dir)
-
 	let s:toml_dir = expand(s:rc_dir . '/plugins')
+  call dein#begin(s:dein_dir, [expand('<sfile>')] + split(glob(s:toml_dir . '/*.toml'), '\n'))
+
   call dein#load_toml(s:toml_dir . '/dein.toml', {'lazy': 0})
   call dein#load_toml(s:toml_dir . '/dein_lazy.toml', {'lazy': 1})
 
@@ -66,13 +43,15 @@ if dein#load_state(s:dein_dir)
   call dein#save_state()
 endif
 
-filetype plugin indent on
-
 " Install not installed plugins on startup.
 if dein#check_install()
   call dein#install()
 endif
 "End dein Scripts-------------------------
+
+if has('vim_starting')
+  call dein#call_hook('source')
+endif
 
 " key mappings
 noremap j gj
@@ -126,3 +105,27 @@ map <silent> <C-h> :<C-u>Denite -resume -immediately -cursor-pos=-1<CR>
 map <silent> <C-l> :<C-u>Denite -resume -immediately -cursor-pos=+1<CR>
 map <silent> <Leader>w :<C-u>DeniteCursorWord grep<CR>
 map <silent> <Leader>y :<C-u>Denite neoyank<CR>
+
+"#####表示設定#####
+set title "編集中のファイル名を表示
+set tabstop=2 "インデントをスペース2つ分に設定
+set smartindent "オートインデント
+set autoindent
+set number "行番号表示
+set list
+" colors
+syntax on
+colorscheme tender
+set termguicolors
+set background=dark
+
+"#####検索設定#####
+set ignorecase "大文字/小文字の区別なく検索する
+set smartcase "検索文字列に大文字が含まれている場合は区別して検索する
+set wrapscan "検索時に最後まで行ったら最初に戻る
+
+"#####その他設定#####
+set clipboard=unnamed
+"set mouse=a
+set iskeyword+=-
+
