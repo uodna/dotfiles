@@ -88,5 +88,6 @@ nnoremap x "_x
 vnoremap > >gv
 vnoremap < <gv
 nnoremap <silent> <ESC> :nohlsearch<CR>
+vnoremap Y y`]
 
 map <silent> <Leader>n :<C-u>NERDTreeToggle<CR>
