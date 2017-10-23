@@ -63,7 +63,7 @@ set list
 syntax on
 set termguicolors
 set background=dark
-set cursorline
+"set cursorline
 colorscheme tender
 hi Visual guibg=#005f87
 let g:airline_theme = 'tender'
