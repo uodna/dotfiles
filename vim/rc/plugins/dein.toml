@@ -69,3 +69,6 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'gregsexton/gitv'
 
+[[plugins]]
+repo = 'tpope/vim-rails'
+
