@@ -4,6 +4,7 @@
 
 ./karabiner ~/.config/karabiner
 ./iterm2 ~/.config/iterm2
+./peco ~/.peco
 
 ./etc/.tigrc ~/.tigrc
 ./etc/.agignore ~/.agignore
