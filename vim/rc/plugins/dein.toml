@@ -78,3 +78,9 @@ repo = 'editorconfig/editorconfig-vim'
 [[plugins]]
 repo = 'rhysd/committia.vim'
 
+[[plugins]]
+repo = 'kana/vim-textobj-user'
+
+[[plugins]]
+repo = 'rhysd/vim-textobj-ruby'
+on_ft = 'ruby'
