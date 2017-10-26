@@ -72,3 +72,6 @@ repo = 'gregsexton/gitv'
 [[plugins]]
 repo = 'tpope/vim-rails'
 
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+

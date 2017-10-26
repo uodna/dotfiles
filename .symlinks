@@ -8,3 +8,4 @@
 
 ./etc/.tigrc ~/.tigrc
 ./etc/.agignore ~/.agignore
+./etc/.editorconfig ~/.editorconfig

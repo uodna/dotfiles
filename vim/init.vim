@@ -57,7 +57,6 @@ endif
 set title
 set tabstop=2
 set smartindent
-set autoindent
 set number
 set list
 syntax on
