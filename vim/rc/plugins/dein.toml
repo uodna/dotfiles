@@ -75,3 +75,6 @@ repo = 'tpope/vim-rails'
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'
 
+[[plugins]]
+repo = 'rhysd/committia.vim'
+
