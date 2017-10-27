@@ -32199,11 +32199,11 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>2444 210 606 469 1920 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>2084 430 796 473 1920 0 1920 1057 </string>
+	<string>219 366 796 473 0 0 1920 1057 </string>
 	<key>NSWindow Frame UKCrashReporter</key>
 	<string>2781 461 592 584 1920 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1920 0 1920 1057 1920 0 1920 1057 </string>
+	<string>0 0 1920 1057 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2880 10 956 1047 1920 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
@@ -35388,7 +35388,7 @@
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>NoSyncPermissionToShowTip</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
@@ -35497,7 +35497,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-10-25T00:18:11Z</date>
+	<date>2017-10-26T00:18:19Z</date>
 	<key>SavePasteHistory</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -35514,6 +35514,8 @@
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
 	<integer>6</integer>
+	<key>TabStyle</key>
+	<integer>1</integer>
 	<key>TabViewType</key>
 	<integer>0</integer>
 	<key>ThreeFingerEmulates</key>
