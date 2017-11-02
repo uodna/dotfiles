@@ -111,3 +111,7 @@ hook_add = '''
   map <silent> sd <Plug>(operator-surround-delete)a
   map <silent> sr <Plug>(operator-surround-replace)a
 '''
+
+[[plugins]]
+repo = 'brooth/far.vim'
+
