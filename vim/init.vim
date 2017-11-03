@@ -107,12 +107,14 @@ cnoremap <M-f> <S-Right>
 let g:neoterm_position = 'horizontal'
 let g:neoterm_automap_keys = ',tt'
 let g:neoterm_autojump = 1
-let g:neoterm_keep_term_open = 0
 
-" hide/close terminal
-nnoremap <silent> ,th :call neoterm#close()<cr>
-" clear terminal
-nnoremap <silent> ,tl :call neoterm#clear()<cr>
-" kills the current job (send a <c-c>)
-nnoremap <silent> ,tc :call neoterm#kill()<cr>
+nnoremap <silent> ,t :call neoterm#toggle()<cr>
 tnoremap <silent> <C-\> <C-\><C-n>
+
+function! s:neoterm_do_and_open(cmdstr)
+  :call neoterm#do(a:cmdstr)
+  :call neoterm#open()
+endfunction
+
+command! -complete=shellcmd -nargs=+ Z silent call <SID>neoterm_do_and_open(<q-args>)
+
