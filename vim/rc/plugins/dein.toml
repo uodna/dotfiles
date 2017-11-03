@@ -115,3 +115,5 @@ hook_add = '''
 [[plugins]]
 repo = 'brooth/far.vim'
 
+[[plugins]]
+repo = 'kassio/neoterm'

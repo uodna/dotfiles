@@ -103,3 +103,16 @@ cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
 cnoremap <M-b> <S-Left>
 cnoremap <M-f> <S-Right>
+
+let g:neoterm_position = 'horizontal'
+let g:neoterm_automap_keys = ',tt'
+let g:neoterm_autojump = 1
+let g:neoterm_keep_term_open = 0
+
+" hide/close terminal
+nnoremap <silent> ,th :call neoterm#close()<cr>
+" clear terminal
+nnoremap <silent> ,tl :call neoterm#clear()<cr>
+" kills the current job (send a <c-c>)
+nnoremap <silent> ,tc :call neoterm#kill()<cr>
+tnoremap <silent> <C-\> <C-\><C-n>
