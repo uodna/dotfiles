@@ -77,9 +77,6 @@ repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
 repo = 'rhysd/committia.vim'
-
-[[plugins]]
-repo = 'kana/vim-textobj-user'
 on_ft = 'gitcommit'
 hook_add = '''
   let g:committia_hooks = {}
@@ -96,6 +93,9 @@ hook_add = '''
 
   endfunction
 '''
+
+[[plugins]]
+repo = 'kana/vim-textobj-user'
 
 [[plugins]]
 repo = 'rhysd/vim-textobj-ruby'
