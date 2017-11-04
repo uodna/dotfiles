@@ -62,6 +62,9 @@ set refresh-mode = auto
 #set refresh-mode = periodic
 #set refresh-interval = 1
 
+# 差分表示に diff-highlight を使う
+set diff-highlight = true
+
 # H で reset --hard
 bind main    H      ?git reset --hard %(commit)
 bind diff    H      ?git reset --hard %(commit)
@@ -88,3 +91,19 @@ bind diff    <Esc>r ?git rebase --keep-empty %(commit)
 bind main    I ?git rebase -i --keep-empty --autosquash %(commit)
 bind diff    I ?git rebase -i --keep-empty --autosquash %(commit)
 bind main    x !@sh -c "echo %(commit) | pbcopy"
+bind stage   C !git commit
+
+# 移動系のバインド
+bind generic g      move-first-line
+bind diff    n      :/^@@
+bind diff    p      :?^@@
+bind diff    <Ctrl-n> :/^diff --(git|cc)
+bind diff    <Ctrl-p> :?^diff --(git|cc)
+bind stage   n      :/^@@
+bind stage   p      :?^@@
+bind stage   <Ctrl-n> :/^diff --(git|cc)
+bind stage   <Ctrl-p> :?^diff --(git|cc)
+bind pager   n      :/^@@
+bind pager   p      :?^@@
+bind pager   <Ctrl-n> :/^diff --(git|cc)
+bind pager   <Ctrl-p> :?^diff --(git|cc)
