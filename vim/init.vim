@@ -70,7 +70,7 @@ let g:airline_theme = 'tender'
 " search
 set ignorecase "大文字/小文字の区別なく検索する
 set smartcase "検索文字列に大文字が含まれている場合は区別して検索する
-set wrapscan "検索時に最後まで行ったら最初に戻る
+set nowrapscan "検索時に最後まで行っても最初に戻らない
 
 " misc
 set clipboard=unnamed
@@ -88,9 +88,10 @@ vnoremap > >gv
 vnoremap < <gv
 nnoremap <silent> <ESC> :nohlsearch<CR>
 vnoremap Y y`]
-nnoremap / /\v
-nnoremap ? ?\v
-cnoremap s/ s/\v
+map /  <Plug>(incsearch-forward)\v
+map ?  <Plug>(incsearch-backward)\v
+map g/ <Plug>(incsearch-stay)\v
+nnoremap <C-c><C-c> :<C-u>nohlsearch<CR>
 
 map <silent> <Leader>n :<C-u>NERDTreeToggle<CR>
 

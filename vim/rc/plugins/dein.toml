@@ -121,3 +121,6 @@ repo = 'kassio/neoterm'
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
 
+[[plugins]]
+repo = 'haya14busa/incsearch.vim'
+
