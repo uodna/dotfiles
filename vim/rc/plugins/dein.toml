@@ -117,3 +117,7 @@ repo = 'brooth/far.vim'
 
 [[plugins]]
 repo = 'kassio/neoterm'
+
+[[plugins]]
+repo = 'tomtom/tcomment_vim'
+
