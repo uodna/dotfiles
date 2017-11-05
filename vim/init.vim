@@ -105,17 +105,12 @@ cnoremap <C-p> <Up>
 cnoremap <M-b> <S-Left>
 cnoremap <M-f> <S-Right>
 
+" terminal
 let g:neoterm_position = 'horizontal'
-let g:neoterm_automap_keys = ',tt'
-let g:neoterm_autojump = 1
+let g:neoterm_keep_term_open = 1
+let g:neoterm_autoinsert = 0
+let g:neoterm_autojump = 0
 
 nnoremap <silent> ,t :call neoterm#toggle()<cr>
 tnoremap <silent> <C-\> <C-\><C-n>
-
-function! s:neoterm_do_and_open(cmdstr)
-  :call neoterm#do(a:cmdstr)
-  :call neoterm#open()
-endfunction
-
-command! -complete=shellcmd -nargs=+ Z silent call <SID>neoterm_do_and_open(<q-args>)
-
+command! Tig :terminal tig
