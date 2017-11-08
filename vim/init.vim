@@ -82,7 +82,7 @@ noremap j gj
 noremap k gk
 noremap <S-h> ^
 noremap <S-l> $
-" noremap ; :
+noremap ; :
 nnoremap x "_x
 vnoremap > >gv
 vnoremap < <gv
