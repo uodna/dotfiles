@@ -124,3 +124,5 @@ repo = 'tomtom/tcomment_vim'
 [[plugins]]
 repo = 'haya14busa/incsearch.vim'
 
+[[plugins]]
+repo = 'joshdick/onedark.vim'

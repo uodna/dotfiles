@@ -63,9 +63,9 @@ syntax on
 set termguicolors
 set background=dark
 "set cursorline
-colorscheme tender
-hi Visual guibg=#005f87
-let g:airline_theme = 'tender'
+colorscheme onedark
+" hi Visual guibg=#005f87
+let g:airline_theme = 'onedark'
 
 " search
 set ignorecase "大文字/小文字の区別なく検索する
