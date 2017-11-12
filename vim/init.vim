@@ -113,4 +113,10 @@ let g:neoterm_autojump = 0
 
 nnoremap <silent> ,t :call neoterm#toggle()<cr>
 tnoremap <silent> <C-\> <C-\><C-n>
-command! Tig :terminal tig
+
+function! s:tig()
+  :terminal tig
+  :startinsert
+endfunction
+
+command! Tig call <SID>tig()
