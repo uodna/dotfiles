@@ -94,6 +94,7 @@ map g/ <Plug>(incsearch-stay)\v
 nnoremap <C-c><C-c> :<C-u>nohlsearch<CR>
 
 map <silent> <Leader>n :<C-u>NERDTreeToggle<CR>
+map <silent> <Leader>m :<C-u>NERDTreeFind<CR>
 
 cnoremap <C-a> <Home>
 cnoremap <C-b> <Left>
