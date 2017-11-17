@@ -114,6 +114,9 @@ let g:neoterm_keep_term_open = 1
 let g:neoterm_autoinsert = 0
 let g:neoterm_autojump = 0
 
+let g:deoplete#enable_at_startup = 1
+" set completeopt+=noinsert
+
 nnoremap <silent> ,t :call neoterm#toggle()<cr>
 tnoremap <silent> <C-\> <C-\><C-n>
 
@@ -123,3 +126,4 @@ function! s:tig()
 endfunction
 
 command! Tig call <SID>tig()
+
