@@ -4,7 +4,11 @@ rtp = ''
 hook_add = 'source ~/.vim/rc/plugins/configs/dein.rc.vim'
 
 [[plugins]]
-repo = 'jacoborus/tender.vim'
+repo = 'morhetz/gruvbox'
+hook_add = '''
+  let g:gruvbox_contrast_dark = 'soft'
+  let g:gruvbox_italic = 1
+'''
 
 [[plugins]]
 repo = 'Shougo/neosnippet.vim'
@@ -116,6 +120,3 @@ repo = 'tomtom/tcomment_vim'
 
 [[plugins]]
 repo = 'haya14busa/incsearch.vim'
-
-[[plugins]]
-repo = 'joshdick/onedark.vim'

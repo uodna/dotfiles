@@ -59,13 +59,14 @@ set tabstop=2
 set smartindent
 set number
 set list
+
 syntax on
 set termguicolors
 set background=dark
 "set cursorline
-colorscheme onedark
+colorscheme gruvbox
 " hi Visual guibg=#005f87
-let g:airline_theme = 'onedark'
+let g:airline_theme = 'gruvbox'
 
 " search
 set ignorecase "大文字/小文字の区別なく検索する
