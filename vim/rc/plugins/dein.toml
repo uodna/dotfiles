@@ -17,13 +17,6 @@ repo = 'Shougo/vimproc.vim'
 build = 'make'
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-
-[[plugins]]
-repo = 'zchee/deoplete-go'
-build = 'make'
-
-[[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_source = 'source ~/.vim/rc/plugins/configs/denite.rc.vim'
 

@@ -1,3 +1,16 @@
 [[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_event = 'InsertEnter'
+hook_source = '''
+  let g:deoplete#enable_at_startup = 1
+  source ~/.vim/rc/plugins/configs/deoplete.rc.vim
+'''
+
+[[plugins]]
+repo = 'zchee/deoplete-go'
+on_ft = 'go'
+build = 'make'
+
+[[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
