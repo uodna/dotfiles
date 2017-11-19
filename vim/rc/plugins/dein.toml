@@ -26,6 +26,9 @@ hook_source = 'source ~/.vim/rc/plugins/configs/denite.rc.vim'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
+hook_add = '''
+  let g:airline_theme = 'gruvbox'
+'''
 
 [[plugins]]
 repo = 'Shougo/vimshell'

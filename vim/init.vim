@@ -53,20 +53,7 @@ if has('vim_starting')
   call dein#call_hook('source')
 endif
 
-" view
-set title
-set tabstop=2
-set smartindent
-set number
-set list
-
-syntax on
-set termguicolors
-set background=dark
-"set cursorline
-colorscheme gruvbox
-" hi Visual guibg=#005f87
-let g:airline_theme = 'gruvbox'
+call s:source_rc('view.rc.vim')
 
 " search
 set ignorecase "大文字/小文字の区別なく検索する
