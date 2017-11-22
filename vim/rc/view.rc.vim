@@ -10,3 +10,5 @@ set background=dark
 " set cursorline
 colorscheme gruvbox
 " hi Visual guibg=#005f87
+set splitright
+set splitbelow
