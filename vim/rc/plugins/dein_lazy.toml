@@ -12,9 +12,5 @@ on_ft = 'go'
 build = 'make'
 
 [[plugins]]
-repo = 'Shougo/deoplete-rct'
-on_ft = 'ruby'
-
-[[plugins]]
 repo = 'cespare/vim-toml'
 on_ft = 'toml'
