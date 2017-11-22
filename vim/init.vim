@@ -65,20 +65,3 @@ set nowrapscan "検索時に最後まで行っても最初に戻らない
 set clipboard=unnamed
 "set mouse=a
 set iskeyword+=-
-
-" terminal
-let g:neoterm_position = 'horizontal'
-let g:neoterm_keep_term_open = 1
-let g:neoterm_autoinsert = 0
-let g:neoterm_autojump = 0
-
-nnoremap <silent> ,t :call neoterm#toggle()<cr>
-tnoremap <silent> <C-\> <C-\><C-n>
-
-function! s:tig()
-  :terminal tig
-  :startinsert
-endfunction
-
-command! Tig call <SID>tig()
-

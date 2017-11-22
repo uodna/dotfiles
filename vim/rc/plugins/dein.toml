@@ -117,6 +117,22 @@ repo = 'brooth/far.vim'
 
 [[plugins]]
 repo = 'kassio/neoterm'
+hook_add = '''
+  let g:neoterm_position = 'horizontal'
+  let g:neoterm_keep_term_open = 1
+  let g:neoterm_autoinsert = 0
+  let g:neoterm_autojump = 0
+
+  nnoremap <silent> ,t :call neoterm#toggle()<cr>
+  tnoremap <silent> <C-\> <C-\><C-n>
+
+  function! s:tig()
+    :terminal tig
+    :startinsert
+  endfunction
+
+  command! Tig call <SID>tig()
+'''
 
 [[plugins]]
 repo = 'tomtom/tcomment_vim'
