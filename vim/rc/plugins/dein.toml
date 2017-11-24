@@ -139,3 +139,9 @@ repo = 'tomtom/tcomment_vim'
 
 [[plugins]]
 repo = 'haya14busa/incsearch.vim'
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+hook_source = '''
+  let g:lexima_enable_basic_rules = 1
+'''
