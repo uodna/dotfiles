@@ -6,6 +6,7 @@
 ./iterm2 ~/.config/iterm2
 ./peco ~/.peco
 ./zsh/.zshrc ~/.zshrc
+./zsh/.zshenv ~/.zshenv
 
 ./etc/.tigrc ~/.tigrc
 ./etc/.agignore ~/.agignore
