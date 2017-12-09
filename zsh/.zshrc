@@ -123,9 +123,6 @@ alias -g G='| grep'
 alias -g L='| less'
 alias -g Y='| pbcopy'
 
-# HOMEBREW
-export HOMEBREW_GITHUB_API_TOKEN=c88061d5f92fdcd3410debdb203f1e0bd652c3ce
-
 # neovim
 export XDG_CONFIG_HOME=$HOME/.config
 
@@ -173,3 +170,5 @@ if ! zplug check --verbose; then
 fi
 
 zplug load # --verbose
+
+[ -f ~/.local/.zshrc ] && source ~/.local/.zshrc
