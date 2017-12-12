@@ -1,3 +1,5 @@
+let NERDTreeIgnore=['\.git$[[dir]]', '\.DS_Store$[[file]]']
+
 call NERDTreeAddKeyMap({
       \ 'key': 'gg',
   \ 'callback': 'NERDTreeDeniteGrep',
