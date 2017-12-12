@@ -42,4 +42,5 @@ map <silent> <C-h> :<C-u>Denite -resume -immediately -cursor-pos=-1<CR>
 map <silent> <C-l> :<C-u>Denite -resume -immediately -cursor-pos=+1<CR>
 map <silent> <Leader>w :<C-u>DeniteCursorWord grep<CR>
 map <silent> <Leader>y :<C-u>Denite neoyank<CR>
+map <silent> <Leader>l :<C-u>Denite line<CR>
 
