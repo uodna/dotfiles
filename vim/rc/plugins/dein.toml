@@ -145,3 +145,9 @@ repo = 'cohama/lexima.vim'
 hook_source = '''
   let g:lexima_enable_basic_rules = 1
 '''
+
+[[plugins]]
+repo = 'neoclide/vim-easygit'
+
+[[plugins]]
+repo = 'neoclide/denite-git'
