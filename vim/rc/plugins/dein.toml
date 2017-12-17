@@ -6,8 +6,9 @@ hook_add = 'source ~/.vim/rc/plugins/configs/dein.rc.vim'
 [[plugins]]
 repo = 'morhetz/gruvbox'
 hook_add = '''
-  let g:gruvbox_contrast_dark = 'soft'
+  let g:gruvbox_contrast_dark = 'medium'
   let g:gruvbox_italic = 1
+  let g:gruvbox_invert_selection = 0
 '''
 
 [[plugins]]
@@ -26,9 +27,6 @@ hook_source = 'source ~/.vim/rc/plugins/configs/denite.rc.vim'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
-hook_add = '''
-  let g:airline_theme = 'gruvbox'
-'''
 
 [[plugins]]
 repo = 'Shougo/vimshell'

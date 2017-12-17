@@ -9,6 +9,7 @@ set termguicolors
 set background=dark
 " set cursorline
 colorscheme gruvbox
-" hi Visual guibg=#005f87
+let g:airline_theme='gruvbox'
+
 set splitright
 set splitbelow
