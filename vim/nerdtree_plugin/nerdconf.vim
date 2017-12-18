@@ -1,4 +1,4 @@
-let NERDTreeIgnore=['\.git$[[dir]]', '\.DS_Store$[[file]]']
+let NERDTreeIgnore=['\.git$[[dir]]', '\.DS_Store$[[file]]', '\.vimsessions$[[dir]]']
 
 call NERDTreeAddKeyMap({
   \ 'key': 'gg',
