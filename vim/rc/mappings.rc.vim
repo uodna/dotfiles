@@ -32,3 +32,9 @@ cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
 cnoremap <M-b> <S-Left>
 cnoremap <M-f> <S-Right>
+
+let g:NERDTreeMapOpenSplit='<C-s>'
+let g:NERDTreeMapOpenVSplit='<C-v>'
+
+let g:NERDTreeMapPreviewSplit='gs'
+let g:NERDTreeMapPreviewVSplit='gv'
