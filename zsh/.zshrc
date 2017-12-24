@@ -66,7 +66,7 @@ alias diff='diff -U1'
 chpwd() { ls -ltr }
 
 # どこからでも参照できるディレクトリパス
-cdpath=(~)
+# cdpath=(~)
 
 # 区切り文字の設定
 # autoload -Uz select-word-style
@@ -106,6 +106,7 @@ zstyle ":chpwd:*" recent-dirs-default true
 alias g='cd $(ghq root)/$(ghq list | peco)'
 alias d='docker'
 alias dc='docker-compose'
+alias v="nvim"
 alias vi="nvim"
 alias vim="nvim"
 alias q="exit"
