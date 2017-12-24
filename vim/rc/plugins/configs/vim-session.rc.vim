@@ -2,7 +2,7 @@
 let g:local_session_directory = getcwd() . '/.vimsessions'
 
 function! s:ConfigureSessionAutoSave()
-  " session保存ディレクトリに設定
+  " session保存ディレクトリを設定
   let g:session_directory = g:local_session_directory
   " 終了時に自動保存
   let g:session_autosave = 'yes'
@@ -15,12 +15,16 @@ function! s:ConfigureSessionAutoSave()
   let g:session_persist_colors = 0
 endfunction
 
-" 存在すれば
-if isdirectory(g:local_session_directory)
-  call s:ConfigureSessionAutoSave()
-else
+function! s:ConfigureNoSessionAutoSave()
   let g:session_autosave = 'no'
   let g:session_autoload = 'no'
+endfunction
+
+" すでにローカルセッションが存在すれば自動保存
+if filewritable(g:local_session_directory . '/default.vim')
+  call s:ConfigureSessionAutoSave()
+else
+  call s:ConfigureNoSessionAutoSave()
 endif
 
 function! s:StartSessionAutoSave() abort
@@ -30,3 +34,10 @@ function! s:StartSessionAutoSave() abort
 endfunction
 
 command! SS call <SID>StartSessionAutoSave()
+
+function! s:StopSessionAutoSave() abort
+  call s:ConfigureNoSessionAutoSave()
+  :DeleteSession
+endfunction
+
+command! DS call <SID>StopSessionAutoSave()
