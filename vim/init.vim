@@ -65,5 +65,6 @@ set nowrapscan "検索時に最後まで行っても最初に戻らない
 set clipboard=unnamed
 "set mouse=a
 set iskeyword+=-
+set inccommand=split
 
 command! -nargs=1 -complete=file Rename f <args>|call delete(expand('#'))
