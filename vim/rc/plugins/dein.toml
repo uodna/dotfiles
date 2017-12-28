@@ -159,3 +159,6 @@ hook_add = 'source ~/.vim/rc/plugins/configs/vim-session.rc.vim'
 
 [[plugins]]
 repo = 'k0kubun/vim-open-github'
+
+[[plugins]]
+repo = 'godlygeek/tabular'
