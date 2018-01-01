@@ -3,6 +3,7 @@ noremap k gk
 noremap <S-h> ^
 noremap <S-l> $
 noremap ; :
+noremap : ;
 nnoremap x "_x
 vnoremap > >gv
 vnoremap < <gv
@@ -20,8 +21,8 @@ map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 nnoremap <C-c><C-c> :<C-u>nohlsearch<CR>
 
-map <silent> <Leader>n :<C-u>NERDTreeToggle<CR>
-map <silent> <Leader>m :<C-u>NERDTreeFind<CR>
+noremap <silent> <Leader>n :<C-u>NERDTreeToggle<CR>
+noremap <silent> <Leader>m :<C-u>NERDTreeFind<CR>
 
 cnoremap <C-a> <Home>
 cnoremap <C-b> <Left>
