@@ -165,3 +165,6 @@ repo = 'godlygeek/tabular'
 
 [[plugins]]
 repo = 'machakann/vim-highlightedyank'
+
+[[plugins]]
+repo = 'simnalamburt/vim-mundo'

@@ -28,6 +28,8 @@ let g:NERDTreeMapOpenVSplit='<C-v>'
 let g:NERDTreeMapPreviewSplit='gs'
 let g:NERDTreeMapPreviewVSplit='gv'
 
+noremap <silent> <Leader>u :<C-u>MundoToggle<CR>
+
 cnoremap <C-a> <Home>
 cnoremap <C-b> <Left>
 cnoremap <C-d> <Del>
