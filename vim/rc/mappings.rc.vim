@@ -39,3 +39,30 @@ cnoremap <C-n> <Down>
 cnoremap <C-p> <Up>
 cnoremap <M-b> <S-Left>
 cnoremap <M-f> <S-Right>
+
+tnoremap <M-h> <C-\><C-N><C-w>h
+tnoremap <M-j> <C-\><C-N><C-w>j
+tnoremap <M-k> <C-\><C-N><C-w>k
+tnoremap <M-l> <C-\><C-N><C-w>l
+tnoremap <M-w> <C-\><C-N><C-w>w
+tnoremap <M-t> <C-\><C-N><C-w>t
+tnoremap <M-b> <C-\><C-N><C-w>b
+tnoremap <M-p> <C-\><C-N><C-w>p
+
+inoremap <M-h> <C-\><C-N><C-w>h
+inoremap <M-j> <C-\><C-N><C-w>j
+inoremap <M-k> <C-\><C-N><C-w>k
+inoremap <M-l> <C-\><C-N><C-w>l
+inoremap <M-w> <C-\><C-N><C-w>w
+inoremap <M-t> <C-\><C-N><C-w>t
+inoremap <M-b> <C-\><C-N><C-w>b
+inoremap <M-p> <C-\><C-N><C-w>p
+
+nnoremap <M-h> <C-w>h
+nnoremap <M-j> <C-w>j
+nnoremap <M-k> <C-w>k
+nnoremap <M-l> <C-w>l
+nnoremap <M-w> <C-w>w
+nnoremap <M-t> <C-w>t
+nnoremap <M-b> <C-w>b
+nnoremap <M-p> <C-w>p

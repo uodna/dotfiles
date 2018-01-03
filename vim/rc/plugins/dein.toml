@@ -119,7 +119,6 @@ hook_add = '''
   let g:neoterm_autojump = 1
 
   nnoremap <silent> ,t :call neoterm#toggle()<cr>
-  tnoremap <silent> <C-\> <C-\><C-n>
 
   function! s:tig()
     :terminal tig
