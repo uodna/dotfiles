@@ -30,6 +30,15 @@ let g:NERDTreeMapPreviewVSplit='gv'
 
 noremap <silent> <Leader>u :<C-u>MundoToggle<CR>
 
+function! s:tig()
+  :tabnew
+  :terminal tig
+  :startinsert
+endfunction
+
+command! Tig call <SID>tig()
+noremap <silent> <Leader>t :<C-u>Tig<CR>
+
 cnoremap <C-a> <Home>
 cnoremap <C-b> <Left>
 cnoremap <C-d> <Del>
