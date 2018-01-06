@@ -3,7 +3,6 @@
 ./vim/init.vim ~/.vimrc
 
 ./karabiner ~/.config/karabiner
-./iterm2 ~/.config/iterm2
 ./peco ~/.peco
 ./zsh/.zshrc ~/.zshrc
 ./zsh/.zshenv ~/.zshenv
