@@ -167,3 +167,11 @@ hook_add = '''
   let g:EasyMotion_use_smartsign_jp = 1
   let g:EasyMotion_enter_jump_first = 1
 '''
+
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+hook_add = '''
+  let g:indent_guides_enable_on_vim_startup = 1
+  let g:indent_guides_start_level = 2
+  let g:indent_guides_guide_size = 1
+'''
