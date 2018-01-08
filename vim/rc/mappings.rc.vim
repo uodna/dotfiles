@@ -10,7 +10,7 @@ vnoremap < <gv
 vnoremap Y y`]
 
 map /  <Plug>(incsearch-forward)\v
-map ?  <Plug>(incsearch-backward)\v
+map ? <Plug>(incsearch-fuzzy-/)
 map g/ <Plug>(incsearch-stay)\v
 map n  <Plug>(incsearch-nohl-n)
 map N  <Plug>(incsearch-nohl-N)
@@ -20,6 +20,19 @@ map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
 nnoremap <silent> <ESC> :<C-u>nohlsearch<CR>
 nnoremap <silent> <C-c> :<C-u>nohlsearch<CR>
+
+" incsearch.vim x fuzzy x vim-easymotion
+function! s:config_easyfuzzymotion(...) abort
+  return extend(copy({
+  \   'converters': [incsearch#config#fuzzy#converter()],
+  \   'modules': [incsearch#config#easymotion#module({'overwin': 1})],
+  \   'keymap': {"\<CR>": '<Over>(easymotion)'},
+  \   'is_expr': 0,
+  \   'is_stay': 1
+  \ }), get(a:, 1, {}))
+endfunction
+
+noremap <silent><expr> <Leader>/ incsearch#go(<SID>config_easyfuzzymotion())
 
 noremap <silent> <Leader>n :<C-u>NERDTreeToggle<CR>
 noremap <silent> <Leader>m :<C-u>NERDTreeFind<CR>
