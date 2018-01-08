@@ -67,5 +67,6 @@ set clipboard=unnamed
 set iskeyword+=-
 set inccommand=split
 set undofile
+set noswapfile
 
 command! -nargs=1 -complete=file Rename f <args>|call delete(expand('#'))
