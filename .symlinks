@@ -10,3 +10,4 @@
 ./etc/.tigrc ~/.tigrc
 ./etc/.agignore ~/.agignore
 ./etc/.editorconfig ~/.editorconfig
+./etc/.tmux.conf ~/.tmux.conf
