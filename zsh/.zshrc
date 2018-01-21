@@ -1,13 +1,5 @@
 # Ctrl+Dでログアウトしてしまうことを防ぐ
-setopt IGNOREEOF
-
-# 色を使用
-autoload -Uz colors
-colors
-
-# 補完
-autoload -Uz compinit
-compinit
+# setopt IGNOREEOF
 
 # emacsキーバインド
 bindkey -e
@@ -35,13 +27,6 @@ setopt pushd_ignore_dups
 # コマンドミスを修正
 setopt correct
 
-# # グローバルエイリアス
-# alias -g L='| less'
-# alias -g H='| head'
-# alias -g G='| grep'
-# alias -g GI='| grep -ri'
-#
-#
 # # エイリアス
 # alias lst='ls -ltr --color=auto'
 # alias l='ls -ltr --color=auto'
@@ -57,9 +42,6 @@ setopt correct
 alias h='fc -lt '%F %T' 1'
 alias cp='cp -i'
 alias rm='rm -i'
-alias mkdir='mkdir -p'
-alias ..='c ../'
-alias back='pushd'
 alias diff='diff -U1'
 
 # cdの後にlsを実行
@@ -112,6 +94,7 @@ alias vim="nvim"
 alias q="exit"
 alias la='ls -la'
 alias ll='ls -l'
+alias t='tmux'
 
 # global aliases
 alias -g G='| grep'
