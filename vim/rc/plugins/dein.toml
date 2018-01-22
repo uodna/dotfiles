@@ -125,7 +125,7 @@ hook_add = '''
   let g:neoterm_autoinsert = 1
   let g:neoterm_autojump = 1
 
-  nnoremap <silent> ,t :call neoterm#toggle()<cr>
+  nnoremap <silent> T :call neoterm#toggle()<cr>
   tnoremap <silent> <C-\> <C-\><C-n>
 '''
 

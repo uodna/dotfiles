@@ -52,7 +52,7 @@ endfunction
 command! Tig call <SID>tig()
 noremap <silent> <Leader>t :<C-u>Tig<CR>
 
-nmap : <Plug>(easymotion-overwin-f2)
+nmap , <Plug>(easymotion-overwin-f2)
 map <C-j> <Plug>(easymotion-j)
 map <C-k> <Plug>(easymotion-k)
 
