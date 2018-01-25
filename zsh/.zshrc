@@ -136,4 +136,6 @@ fi
 
 zplug load # --verbose
 
+source $HOME/.cargo/env
+
 [ -f ~/.local/.zshrc ] && source ~/.local/.zshrc
