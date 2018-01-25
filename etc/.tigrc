@@ -76,21 +76,14 @@ bind status  H      ?git reset --hard HEAD
 ## merge/rebase
 
 # R で rebase
-bind main    R      ?git rebase --keep-empty %(branch)
-bind diff    R      ?git rebase --keep-empty %(branch)
-bind refs    R      ?git rebase --keep-empty %(branch)
-bind main    <Esc>r ?git rebase --keep-empty %(commit)
-bind diff    <Esc>r ?git rebase --keep-empty %(commit)
+bind main    R ?git rebase -i --keep-empty --autosquash %(commit)
+bind diff    R ?git rebase -i --keep-empty --autosquash %(commit)
 
-# I で rebase -i
-# bind main    I      ?git rebase -i --keep-empty %(branch)
-# bind diff    I      ?git rebase -i --keep-empty %(branch)
-# bind refs    I      ?git rebase -i --keep-empty %(branch)
-# bind main    <Esc>i ?git rebase -i --keep-empty %(commit)
-# bind diff    <Esc>i ?git rebase -i --keep-empty %(commit)
-bind main    I ?git rebase -i --keep-empty --autosquash %(commit)
-bind diff    I ?git rebase -i --keep-empty --autosquash %(commit)
-bind main    x !@sh -c "echo %(commit) | pbcopy"
+# x で commit hash を copy
+bind main    x !@sh -c "echo %(commit) | cut -c -8 | pbcopy"
+
+# C で commit
+bind main   C !git commit
 bind stage   C !git commit
 
 # 移動系のバインド
