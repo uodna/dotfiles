@@ -28,6 +28,9 @@ export PATH="/usr/local/opt/mysql@5.6/bin:$PATH"
 export EDITOR=nvim
 export XDG_CONFIG_HOME=$HOME/.config
 
+# less
+export MANPAGER=less
+
 # History file and its size
 export HISTFILE=~/.zsh_history
 export HISTSIZE=1000000
