@@ -11,3 +11,5 @@
 ./etc/.agignore ~/.agignore
 ./etc/.editorconfig ~/.editorconfig
 ./etc/.tmux.conf ~/.tmux.conf
+./etc/.lesskey ~/.lesskey
+./etc/.less ~/.less
