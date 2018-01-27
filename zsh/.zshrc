@@ -95,6 +95,7 @@ alias q="exit"
 alias la='ls -la'
 alias ll='ls -l'
 alias t='tmux'
+alias be='bundle exec'
 
 # global aliases
 alias -g G='| grep'
@@ -103,6 +104,9 @@ alias -g Y='| pbcopy'
 
 # anyenv
 eval "$(anyenv init -)"
+
+# pyenv-virtualenv
+eval "$(pyenv virtualenv-init -)"
 
 # direnv
 eval "$(direnv hook zsh)"
@@ -116,6 +120,9 @@ function peco-history-selection() {
 
 zle -N peco-history-selection
 bindkey '^R' peco-history-selection
+
+# rust
+source $HOME/.cargo/env
 
 # zplug
 source ~/.zplug/init.zsh
@@ -135,7 +142,5 @@ if ! zplug check --verbose; then
 fi
 
 zplug load # --verbose
-
-source $HOME/.cargo/env
 
 [ -f ~/.local/.zshrc ] && source ~/.local/.zshrc
