@@ -12,5 +12,5 @@ cat .symlinks | sed -e 's/^ *//;s/ *$//;/^$/d' | while read link; do
   [ ! -e `dirname $to` ] && mkdir -p "$(dirname "$to")"
   from=$(abspath $from)
   to=$(abspath $to)
-  ln -sfFnv $from $to
+  ln -sfnv $from $to
 done
