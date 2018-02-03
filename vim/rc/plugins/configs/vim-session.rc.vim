@@ -13,6 +13,7 @@ function! s:ConfigureSessionAutoSave()
   " fontとcolor設定を再読込する
   let g:session_persist_font = 0
   let g:session_persist_colors = 0
+  let g:session_lock_enabled = 0
 endfunction
 
 function! s:ConfigureNoSessionAutoSave()
