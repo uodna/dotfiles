@@ -198,3 +198,6 @@ repo = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
 repo = 'glidenote/memolist.vim'
+
+[[plugins]]
+repo = 'luochen1990/rainbow'
