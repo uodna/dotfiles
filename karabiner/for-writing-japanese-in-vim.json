@@ -1,0 +1,54 @@
+{
+  "title": "For writing Japanese in vim",
+  "rules": [
+    {
+      "description": "Post japanese_eisuu after escape",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "escape"
+          },
+          "to": [
+            {
+              "key_code": "escape"
+            },
+            {
+              "key_code": "japanese_eisuu"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+      "description": "Post japanese_eisuu after ctrl-c",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": [
+                "left_control"
+              ],
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "c",
+              "modifiers": [
+                "left_control"
+              ]
+            },
+            {
+              "key_code": "japanese_eisuu"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
