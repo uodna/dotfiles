@@ -198,6 +198,3 @@ repo = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
 repo = 'glidenote/memolist.vim'
-
-[[plugins]]
-repo = 'tmux-plugins/vim-tmux'
