@@ -35,6 +35,9 @@ export XDG_CONFIG_HOME=$HOME/.config
 # less
 export MANPAGER=less
 
+# go
+export PATH=$PATH:$(go env GOPATH)/bin
+
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
