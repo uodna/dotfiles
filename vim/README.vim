@@ -3,9 +3,8 @@
 * Python3
 
 ```
-env PYTHON_CONFIGURE_OPTS="--enable-framework" pyenv install 3.6.3
-pyenv virtualenv neovim3 3.6.3
-pyenv activate neovim3
+env PYTHON_CONFIGURE_OPTS="--enable-framework" pyenv install 3.6.4
+pyenv global 3.6.4
 pip install neovim
 ```
 
