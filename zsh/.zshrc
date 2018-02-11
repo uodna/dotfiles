@@ -5,11 +5,12 @@
 bindkey -e
 # bindkey -v
 
-# 他のターミナルとヒストリーを共有
+# history
 setopt share_history
-
-# ヒストリーに重複を表示しない
+setopt extended_history
 setopt histignorealldups
+setopt hist_ignore_space
+setopt hist_reduce_blanks
 
 # cdコマンドを省略して、ディレクトリ名のみの入力で移動
 # setopt auto_cd
@@ -35,7 +36,7 @@ setopt correct
 # alias c='cdr'
 
 # historyに日付を表示
-alias h='fc -lt '%F %T' 1'
+alias h="fc -Dlt '%F %T' 1"
 alias cp='cp -i'
 alias rm='rm -i'
 alias diff='diff -U1'
