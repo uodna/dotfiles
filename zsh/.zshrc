@@ -81,7 +81,7 @@ add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ":chpwd:*" recent-dirs-default true
 
 # aliases
-alias g='cd $(ghq root)/$(ghq list | peco)'
+alias g='cd $(ghq root)/$(ghq list | fzf)'
 alias d='docker'
 alias dc='docker-compose'
 alias v="nvim"
@@ -92,11 +92,13 @@ alias ll='ls -l'
 alias t='tmux'
 alias tm="tmux attach || tmux new"
 alias be='bundle exec'
+alias j='z'
 
 # global aliases
 alias -g G='| grep'
 alias -g L='| less'
 alias -g Y='| pbcopy'
+alias -g F='| fzf'
 
 # anyenv
 eval "$(anyenv init -)"
@@ -107,15 +109,26 @@ eval "$(pyenv virtualenv-init -)"
 # direnv
 eval "$(direnv hook zsh)"
 
-# peco-history
-function peco-history-selection() {
-    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
-    CURSOR=$#BUFFER
-    zle reset-prompt
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_OPTS='--reverse --inline-info'
+export FZF_CTRL_T_OPTS="--select-1 --exit-0 --preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
+export FZF_CTRL_R_OPTS="--height 60% --preview 'echo {}' --preview-window down:3:wrap --bind '?:toggle-preview'"
+export FZF_COMPLETION_TRIGGER=''
+export FZF_COMPLETION_OPTS="--height 60% --select-1 --exit-0 --preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200' --preview-window hidden --bind '?:toggle-preview'"
+bindkey '^T' fzf-completion
+bindkey '^O' fzf-cd-widget
+bindkey '^I' $fzf_default_completion
+
+_fzf_compgen_path() {
+  fd --hidden --follow --exclude ".git" . "$1"
 }
 
-zle -N peco-history-selection
-bindkey '^R' peco-history-selection
+# Use fd to generate the list for directory completion
+_fzf_compgen_dir() {
+  fd --type d --hidden --follow --exclude ".git" . "$1"
+}
 
 # rust
 source $HOME/.cargo/env
@@ -123,12 +136,16 @@ source $HOME/.cargo/env
 # zplug
 source ~/.zplug/init.zsh
 
-zplug 'zsh-users/zsh-completions'
-zplug 'zsh-users/zsh-autosuggestions'
-zplug 'zsh-users/zsh-syntax-highlighting', defer:2
-zplug 'zsh-users/zsh-history-substring-search', defer:3
-zplug 'mafredri/zsh-async', from:github
-zplug 'sindresorhus/pure', use:pure.zsh, from:github, as:theme
+zplug "zplug/zplug", hook-build:"zplug --self-manage"
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-history-substring-search", defer:3
+zplug "mafredri/zsh-async", from:github
+zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+# zplug "changyuheng/fz", defer:1
+zplug "rupa/z", use:z.sh
+# zplug "changyuheng/zsh-interactive-cd"
 
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -138,5 +155,11 @@ if ! zplug check --verbose; then
 fi
 
 zplug load # --verbose
+
+unalias z 2> /dev/null
+z() {
+  [ $# -gt 0 ] && _z "$*" && return
+  cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
+}
 
 [ -f ~/.local/.zshrc ] && source ~/.local/.zshrc
