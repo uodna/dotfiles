@@ -35,3 +35,6 @@ export MANPAGER=less
 export HISTFILE=~/.zsh_history
 export HISTSIZE=1000000
 export SAVEHIST=1000000
+# rust
+export PATH="$HOME/.cargo/bin:$PATH"
+

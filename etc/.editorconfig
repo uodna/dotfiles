@@ -20,3 +20,7 @@ indent_size = 4
 # Python
 [*.py]
 indent_size = 4
+
+# Rust
+[*.rs]
+indent_size = 4

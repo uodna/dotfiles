@@ -18,3 +18,17 @@ on_ft = 'toml'
 [[plugins]]
 repo = 'tmux-plugins/vim-tmux'
 on_ft = 'tmux'
+
+[[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = 'rust'
+hook_add = '''
+  let g:rustfmt_autosave = 1
+'''
+
+[[plugins]]
+repo = 'racer-rust/vim-racer'
+on_ft = 'rust'
+hook_add = '''
+  let g:racer_experimental_completer = 1
+'''
