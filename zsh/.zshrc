@@ -60,15 +60,16 @@ zstyle ":chpwd:*" recent-dirs-default true
 alias g='cd $(ghq root)/$(ghq list | fzf)'
 alias d='docker'
 alias dc='docker-compose'
-alias v="nvim"
-alias vi="nvim"
-alias q="exit"
+alias v='nvim'
+alias vi='nvim'
+alias q='exit'
 alias la='ls -la'
 alias ll='ls -l'
 alias t='tmux'
-alias tm="tmux attach || tmux new"
+alias tm='tmux attach || tmux new'
 alias be='bundle exec'
 alias j='z'
+alias c='cdr $(cdr -l | fzf --height 60% --nth 2.. | awk '\''{print $1}'\'')'
 
 # global aliases
 alias -g G='| grep'
