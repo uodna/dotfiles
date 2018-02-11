@@ -11,10 +11,6 @@ setopt share_history
 # ヒストリーに重複を表示しない
 setopt histignorealldups
 
-HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
-
 # cdコマンドを省略して、ディレクトリ名のみの入力で移動
 # setopt auto_cd
 
@@ -45,16 +41,16 @@ alias rm='rm -i'
 alias diff='diff -U1'
 
 # cdの後にlsを実行
-chpwd() { ls -ltr }
+# chpwd() { ls -ltr }
 
 # どこからでも参照できるディレクトリパス
 # cdpath=(~)
 
 # 区切り文字の設定
-# autoload -Uz select-word-style
-# select-word-style default
-# zstyle ':zle:*' word-chars "_-./;@"
-# zstyle ':zle:*' word-style unspecified
+autoload -Uz select-word-style
+select-word-style default
+zstyle ':zle:*' word-chars "_-./;@ "
+zstyle ':zle:*' word-style unspecified
 
 # Ctrl+sのロック, Ctrl+qのロック解除を無効にする
 setopt no_flow_control
@@ -90,11 +86,11 @@ alias d='docker'
 alias dc='docker-compose'
 alias v="nvim"
 alias vi="nvim"
-alias vim="nvim"
 alias q="exit"
 alias la='ls -la'
 alias ll='ls -l'
 alias t='tmux'
+alias tm="tmux attach || tmux new"
 alias be='bundle exec'
 
 # global aliases
