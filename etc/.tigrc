@@ -65,6 +65,10 @@ set refresh-mode = auto
 # 差分表示に diff-highlight を使う
 set diff-highlight = true
 
+# untracked filesを表示する
+set status-show-untracked-files = yes
+set status-show-untracked-dirs = yes
+
 # H で reset --hard
 bind main    H      ?git reset --hard %(commit)
 bind diff    H      ?git reset --hard %(commit)
