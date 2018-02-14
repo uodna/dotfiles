@@ -32,3 +32,10 @@ on_ft = 'rust'
 hook_add = '''
   let g:racer_experimental_completer = 1
 '''
+
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+on_ft = 'javascript'
+hook_add = '''
+  let g:javascript_plugin_flow = 1
+'''
