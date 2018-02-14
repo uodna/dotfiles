@@ -82,6 +82,7 @@ tnoremap <M-w> <C-\><C-N><C-w>w
 tnoremap <M-t> <C-\><C-N><C-w>t
 tnoremap <M-b> <C-\><C-N><C-w>b
 tnoremap <M-p> <C-\><C-N><C-w>p
+tnoremap <M-c> <C-\><C-N><C-w>c
 
 inoremap <M-h> <C-\><C-N><C-w>h
 inoremap <M-j> <C-\><C-N><C-w>j
@@ -91,6 +92,7 @@ inoremap <M-w> <C-\><C-N><C-w>w
 inoremap <M-t> <C-\><C-N><C-w>t
 inoremap <M-b> <C-\><C-N><C-w>b
 inoremap <M-p> <C-\><C-N><C-w>p
+inoremap <M-c> <C-\><C-N><C-w>c
 
 nnoremap <M-h> <C-w>h
 nnoremap <M-j> <C-w>j
@@ -100,3 +102,4 @@ nnoremap <M-w> <C-w>w
 nnoremap <M-t> <C-w>t
 nnoremap <M-b> <C-w>b
 nnoremap <M-p> <C-w>p
+nnoremap <M-c> <C-w>c
