@@ -70,6 +70,7 @@ alias tm='tmux attach || tmux new'
 alias be='bundle exec'
 alias j='z'
 alias c='cdr $(cdr -l | fzf --height 60% --nth 2.. | awk '\''{print $1}'\'')'
+alias ssh='TERM=xterm-256color ssh'
 
 # global aliases
 alias -g G='| grep'
