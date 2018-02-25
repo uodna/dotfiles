@@ -133,4 +133,14 @@ z() {
   cd "$(_z -l 2>&1 | fzf --nth 2.. +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
 }
 
+# mkdir して cd
+function take()
+{
+  if [[ -d $1 ]]; then
+    cd $1 && echo -e "\e[1;35m***\e[m\e[1;34m$1\e[m already exists. cd to it"
+  else
+    mkdir -p $1 && cd $1 && echo -e "\e[1;35m***\e[mCreated \e[1;34m$1\e[m and cd to it"
+  fi
+}
+
 [ -f ~/.local/.zshrc ] && source ~/.local/.zshrc
