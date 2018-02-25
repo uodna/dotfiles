@@ -6,6 +6,7 @@
 ./peco ~/.peco
 ./zsh/.zshrc ~/.zshrc
 ./zsh/.zshenv ~/.zshenv
+./zsh/.zsh ~/.zsh
 
 ./etc/.tigrc ~/.tigrc
 ./etc/.agignore ~/.agignore

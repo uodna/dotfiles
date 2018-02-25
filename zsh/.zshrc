@@ -112,27 +112,20 @@ _fzf_compgen_dir() {
 source $HOME/.cargo/env
 
 # zplug
-source ~/.zplug/init.zsh
+if [[ -f ~/.zplug/init.zsh ]]; then
+    export ZPLUG_LOADFILE="$HOME/.zsh/zplug.zsh"
+    source ~/.zplug/init.zsh
 
-zplug "zplug/zplug", hook-build:"zplug --self-manage"
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
-zplug "zsh-users/zsh-history-substring-search", defer:3
-zplug "mafredri/zsh-async", from:github
-zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
-# zplug "changyuheng/fz", defer:1
-zplug "rupa/z", use:z.sh
-# zplug "changyuheng/zsh-interactive-cd"
-
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
+    #if ! zplug check --verbose; then
+    #    printf "Install? [y/N]: "
+    #    if read -q; then
+    #        echo; zplug install
+    #    else
+    #        echo
+    #    fi
+    #fi
+    zplug load # --verbose
 fi
-
-zplug load # --verbose
 
 unalias z 2> /dev/null
 z() {
