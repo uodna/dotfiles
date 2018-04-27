@@ -24,3 +24,7 @@ indent_size = 4
 # Rust
 [*.rs]
 indent_size = 4
+
+# Java
+[*.java]
+indent_style = tab
