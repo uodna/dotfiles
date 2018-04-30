@@ -123,7 +123,7 @@ hook_add = '''
 [[plugins]]
 repo = 'kassio/neoterm'
 hook_add = '''
-  let g:neoterm_position = 'horizontal'
+  let g:neoterm_default_mod = 'botright'
   let g:neoterm_keep_term_open = 1
   let g:neoterm_autoinsert = 1
   let g:neoterm_autojump = 1
