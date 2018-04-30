@@ -21,8 +21,8 @@ inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
 inoremap <expr> <BS> deoplete#mappings#close_popup()."\<C-h>"
 inoremap <expr> <C-g> deoplete#mappings#undo_completion()
 
-call deoplete#custom#set('_', 'matchers', ['matcher_full_fuzzy', 'matcher_length'])
-call deoplete#custom#set('_', 'converters', [
+call deoplete#custom#source('_', 'matchers', ['matcher_full_fuzzy', 'matcher_length'])
+call deoplete#custom#source('_', 'converters', [
   \ 'converter_remove_paren',
   \ 'converter_auto_delimiter',
   \ 'converter_remove_overlap',
