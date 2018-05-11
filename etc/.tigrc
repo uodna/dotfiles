@@ -84,7 +84,7 @@ bind main    R ?git rebase -i --keep-empty --autosquash %(commit)
 bind diff    R ?git rebase -i --keep-empty --autosquash %(commit)
 
 # x で commit hash を copy
-bind main    x !@sh -c "echo %(commit) | cut -c -8 | pbcopy"
+bind main x      @bash -c "echo -n '%(commit)' | pbcopy"
 
 # C で commit
 bind main   C !git commit
