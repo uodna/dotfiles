@@ -13,3 +13,5 @@ let g:airline_theme='gruvbox'
 
 set splitright
 set splitbelow
+
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
