@@ -109,3 +109,6 @@ nnoremap <silent> <C-x> :quit<CR>
 tnoremap <silent> <C-x> <C-\><C-N>:quit<CR>
 nnoremap <silent> <C-w>n :vnew<CR>
 nnoremap <C-w>t <C-w>T
+
+nmap <silent> <leader>d <Plug>DashSearch
+
