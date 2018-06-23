@@ -35,7 +35,7 @@ endfunction
 noremap <silent><expr> <Leader>/ incsearch#go(<SID>config_easyfuzzymotion())
 
 noremap <silent> <Leader>n :<C-u>NERDTreeToggle<CR>
-noremap <silent> <Leader>m :<C-u>NERDTreeFind<CR>
+noremap <silent> <Leader>N :<C-u>NERDTreeFind<CR>
 let g:NERDTreeMapOpenSplit='<C-g>'
 let g:NERDTreeMapOpenVSplit='<C-v>'
 let g:NERDTreeMapPreviewSplit='gs'

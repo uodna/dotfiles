@@ -47,4 +47,5 @@ noremap <silent> <Leader>w :<C-u>DeniteCursorWord grep<CR>
 noremap <silent> <Leader>y :<C-u>Denite neoyank<CR>
 noremap <silent> <Leader>l :<C-u>Denite line<CR>
 noremap <silent> <Leader>b :<C-u>Denite buffer<CR>
+noremap <silent> <Leader>m :<C-u>Denite file_mru -cursor-pos=+1<CR>
 
