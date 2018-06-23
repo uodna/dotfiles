@@ -108,6 +108,8 @@ source $HOME/.cargo/env
 # direnv
 eval "$(direnv hook zsh)"
 
+export PATH="bin:$PATH"
+
 # zplug
 if [[ -f ~/.zplug/init.zsh ]]; then
     export ZPLUG_LOADFILE="$HOME/.zsh/zplug.zsh"
@@ -173,5 +175,6 @@ function take()
   fi
 }
 alias tk='take'
+
 
 [ -f ~/.local/.zshrc ] && source ~/.local/.zshrc
