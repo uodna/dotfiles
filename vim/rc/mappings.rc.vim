@@ -103,3 +103,9 @@ nnoremap <M-t> <C-w>t
 nnoremap <M-b> <C-w>b
 nnoremap <M-p> <C-w>p
 nnoremap <M-c> <C-w>c
+
+nnoremap <silent> <C-a> :tabNext<CR>
+nnoremap <silent> <C-x> :quit<CR>
+tnoremap <silent> <C-x> <C-\><C-N>:quit<CR>
+nnoremap <silent> <C-w>n :vnew<CR>
+nnoremap <C-w>t <C-w>T
