@@ -1,5 +1,7 @@
 noremap j gj
+noremap gj j
 noremap k gk
+noremap gk k
 noremap <S-h> ^
 noremap <S-l> $
 noremap ; :
