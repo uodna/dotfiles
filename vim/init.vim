@@ -3,7 +3,7 @@ filetype plugin indent on
 let g:python3_host_prog = $PYENV_ROOT . '/shims/python3'
 let g:mapleader = "\<Space>"
 
-let s:rc_dir = resolve(expand('~/.vim/rc'))
+let s:rc_dir = resolve(expand('~/.config/nvim/rc'))
 
 function! s:source_rc(path) abort
   let l:abspath = resolve(expand(s:rc_dir . '/' . a:path))

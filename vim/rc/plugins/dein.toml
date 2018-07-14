@@ -1,7 +1,7 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 rtp = ''
-hook_add = 'source ~/.vim/rc/plugins/configs/dein.rc.vim'
+hook_add = 'source ~/.config/nvim/rc/plugins/configs/dein.rc.vim'
 
 [[plugins]]
 repo = 'morhetz/gruvbox'
@@ -23,11 +23,11 @@ build = 'make'
 
 [[plugins]]
 repo = 'Shougo/denite.nvim'
-hook_source = 'source ~/.vim/rc/plugins/configs/denite.rc.vim'
+hook_source = 'source ~/.config/nvim/rc/plugins/configs/denite.rc.vim'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
-hook_source = 'source ~/.vim/rc/plugins/configs/lightline.rc.vim'
+hook_source = 'source ~/.config/nvim/rc/plugins/configs/lightline.rc.vim'
 
 [[plugins]]
 repo = 'Shougo/vimshell'
@@ -161,7 +161,7 @@ repo = 'xolox/vim-misc'
 
 [[plugins]]
 repo = 'xolox/vim-session'
-hook_add = 'source ~/.vim/rc/plugins/configs/vim-session.rc.vim'
+hook_add = 'source ~/.config/nvim/rc/plugins/configs/vim-session.rc.vim'
 
 [[plugins]]
 repo = 'uodna/vim-open-github'
