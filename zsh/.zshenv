@@ -40,3 +40,7 @@ export PATH=$PATH:$(go env GOPATH)/bin
 
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# tfenv
+export PATH="$HOME/.tfenv/bin:$PATH"
+
