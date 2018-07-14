@@ -14,6 +14,8 @@ function! s:ConfigureSessionAutoSave()
   let g:session_persist_font = 0
   let g:session_persist_colors = 0
   let g:session_lock_enabled = 0
+
+  set sessionoptions-=help
 endfunction
 
 function! s:ConfigureNoSessionAutoSave()
