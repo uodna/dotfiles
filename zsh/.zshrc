@@ -134,7 +134,7 @@ if [[ -f ~/.fzf.zsh ]]; then
   export FZF_DEFAULT_COMMAND='fd --type f'
   export FZF_DEFAULT_OPTS='--reverse --inline-info'
   export FZF_CTRL_T_OPTS="--select-1 --exit-0 --preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
-  export FZF_CTRL_R_OPTS="--height 60% --preview 'echo {}' --preview-window down:3:wrap --bind '?:toggle-preview'"
+  export FZF_CTRL_R_OPTS="--with-nth 2.. --height 60% --preview 'echo {}' --preview-window down:3:wrap --bind '?:toggle-preview'"
   export FZF_COMPLETION_TRIGGER='**'
   # export FZF_COMPLETION_OPTS="--height 60% --select-1 --exit-0 --preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200' --preview-window hidden --bind '?:toggle-preview'"
 
