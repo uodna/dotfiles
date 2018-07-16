@@ -6,6 +6,7 @@ set iskeyword+=-
 set mouse=a
 set noswapfile
 set nowrapscan
+set scrolloff=8
 set smartcase
 set splitbelow
 set splitright
