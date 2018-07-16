@@ -20,12 +20,8 @@ zshaddhistory()
 # disable auto_cd
 setopt no_auto_cd
 
-# pushd
-setopt auto_pushd
-setopt pushd_ignore_dups
-
 # コマンドミスを修正
-setopt correct
+setopt no_correct
 
 # Ctrl+sのロック, Ctrl+qのロック解除を無効にする
 setopt no_flow_control
