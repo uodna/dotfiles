@@ -51,7 +51,14 @@ function! s:tig()
   :startinsert
 endfunction
 
+function! s:tigthis(path)
+  :tabnew
+  execute 'terminal tig' expand(a:path)
+  :startinsert
+endfunction
+
 command! Tig call <SID>tig()
+command! Tt call <SID>tigthis(@%)
 noremap <silent> <Leader>t :<C-u>Tig<CR>
 
 nmap , <Plug>(easymotion-overwin-f2)
