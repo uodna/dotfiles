@@ -84,6 +84,9 @@ alias c='cdr $(cdr -l | fzf --height 60% --nth 2.. | awk '\''{print $1}'\'')'
 alias ssh='TERM=xterm-256color ssh'
 alias dircolors='gdircolors'
 alias tf='terraform'
+alias myip='curl inet-ip.info/json/indent'
+alias tkt='tk ~/tmp/`date +"%Y%m%d"`'
+alias kk='clear && tmux clear-history'
 
 # global alias
 alias -g G='| grep'
