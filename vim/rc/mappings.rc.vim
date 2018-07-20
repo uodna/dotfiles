@@ -10,6 +10,7 @@ nnoremap x "_x
 vnoremap > >gv
 vnoremap < <gv
 vnoremap Y y`]
+inoremap <C-c> <ESC>
 
 map /  <Plug>(incsearch-forward)\v
 map ? <Plug>(incsearch-fuzzy-/)
