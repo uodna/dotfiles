@@ -1,4 +1,5 @@
 ./vim ~/.config/nvim
+./emacs/.spacemacs ~/.spacemacs
 
 ./karabiner ~/.config/karabiner
 ./peco ~/.peco
