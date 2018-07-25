@@ -36,6 +36,7 @@ call denite#custom#option('default', 'highlight_matched_range', 'Constant')
 call denite#custom#option('default', 'vertical_preview', 1)
 
 noremap <silent> <Leader>p :<C-u>Denite file_rec/git<CR>
+noremap <silent> <Leader>P :<C-u>Denite -auto-preview file_rec/git<CR>
 noremap <silent> <Leader>f :<C-u>Denite file_rec<CR>
 noremap <silent> <Leader>o :<C-u>Denite file_old<CR>
 noremap <silent> <Leader>j :<C-u>Denite -immediately -cusor-pos=+1 file_old<CR>
