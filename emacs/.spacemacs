@@ -144,7 +144,7 @@ values."
    ;; (default "SPC")
    dotspacemacs-emacs-command-key "SPC"
    ;; The key used for Vim Ex commands (default ":")
-   dotspacemacs-ex-command-key ":"
+   dotspacemacs-ex-command-key ";"
    ;; The leader key accessible in `emacs state' and `insert state'
    ;; (default "M-m")
    dotspacemacs-emacs-leader-key "M-m"
@@ -319,8 +319,6 @@ you should place your code here."
   (with-eval-after-load 'company
     (bind-key "C-h" nil company-active-map)
     (bind-key "C-w" nil company-active-map))
-  (evil-define-key 'normal 'global ";" #'evil-ex)
-  (evil-define-key 'visual 'global ";" #'evil-ex)
   ;; (evil-define-key 'normal 'global "M-h" #'evil-window-left)
   ;; (evil-define-key 'normal 'global "M-j" #'evil-window-down)
   ;; (evil-define-key 'normal 'global "M-k" #'evil-window-up)
