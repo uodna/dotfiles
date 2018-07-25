@@ -315,6 +315,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (bind-key* "C-h" #'delete-backward-char)
   (bind-key* "C-w" #'backward-kill-word)
+  ;; (bind-key* "C-c" #'evil-normal-state)
   (with-eval-after-load 'company
     (bind-key "C-h" nil company-active-map)
     (bind-key "C-w" nil company-active-map))
