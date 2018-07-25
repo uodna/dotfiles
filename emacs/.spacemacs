@@ -321,6 +321,10 @@ you should place your code here."
     (bind-key "C-w" nil company-active-map))
   (evil-define-key 'normal 'global ";" #'evil-ex)
   (evil-define-key 'visual 'global ";" #'evil-ex)
+  ;; (evil-define-key 'normal 'global "M-h" #'evil-window-left)
+  ;; (evil-define-key 'normal 'global "M-j" #'evil-window-down)
+  ;; (evil-define-key 'normal 'global "M-k" #'evil-window-up)
+  ;; (evil-define-key 'normal 'global "M-l" #'evil-window-right)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
