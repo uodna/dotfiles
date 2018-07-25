@@ -278,3 +278,6 @@ repo = 'hashivim/vim-terraform'
 hook_add = '''
   let g:terraform_fmt_on_save = 1
 '''
+
+[[plugins]]
+repo = 'terryma/vim-multiple-cursors'
