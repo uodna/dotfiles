@@ -319,6 +319,8 @@ you should place your code here."
   (with-eval-after-load 'company
     (bind-key "C-h" nil company-active-map)
     (bind-key "C-w" nil company-active-map))
+  (evil-define-key 'normal 'global ";" #'evil-ex)
+  (evil-define-key 'visual 'global ";" #'evil-ex)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
