@@ -27,6 +27,7 @@ path=(
 
 # neovim
 export EDITOR=nvim
+export BUNDLER_EDITOR=nvim
 export XDG_CONFIG_HOME=$HOME/.config
 
 # less
