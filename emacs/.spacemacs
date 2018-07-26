@@ -319,6 +319,7 @@ you should place your code here."
   (with-eval-after-load 'company
     (bind-key "C-h" nil company-active-map)
     (bind-key "C-w" nil company-active-map))
+  (define-key isearch-mode-map (kbd "C-h") 'isearch-del-char)
   (evil-define-key 'normal 'global (kbd "M-h") #'evil-window-left)
   (evil-define-key 'normal 'global (kbd "M-j") #'evil-window-down)
   (evil-define-key 'normal 'global (kbd "M-k") #'evil-window-up)
