@@ -319,10 +319,10 @@ you should place your code here."
   (with-eval-after-load 'company
     (bind-key "C-h" nil company-active-map)
     (bind-key "C-w" nil company-active-map))
-  ;; (evil-define-key 'normal 'global "M-h" #'evil-window-left)
-  ;; (evil-define-key 'normal 'global "M-j" #'evil-window-down)
-  ;; (evil-define-key 'normal 'global "M-k" #'evil-window-up)
-  ;; (evil-define-key 'normal 'global "M-l" #'evil-window-right)
+  (evil-define-key 'normal 'global (kbd "M-h") #'evil-window-left)
+  (evil-define-key 'normal 'global (kbd "M-j") #'evil-window-down)
+  (evil-define-key 'normal 'global (kbd "M-k") #'evil-window-up)
+  (evil-define-key 'normal 'global (kbd "M-l") #'evil-window-right)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
