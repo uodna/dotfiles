@@ -324,6 +324,7 @@ you should place your code here."
   (evil-define-key 'normal 'global (kbd "M-j") #'evil-window-down)
   (evil-define-key 'normal 'global (kbd "M-k") #'evil-window-up)
   (evil-define-key 'normal 'global (kbd "M-l") #'evil-window-right)
+  ;; TODO use search-forward-regexp instead of evil-search-forward
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
