@@ -72,6 +72,7 @@ alias dc='docker-compose'
 alias diff='diff -U2'
 alias dircolors='gdircolors'
 alias g='cd $(ghq root)/$(ghq list | fzf)'
+alias grt='git-root'
 alias h="fc -Dlt '%F %T' 1" # historyに日付を表示
 alias j='z'
 alias kk='clear && tmux clear-history'
@@ -176,3 +177,9 @@ alias tk='take'
 
 
 [ -f ~/.local/.zshrc ] && source ~/.local/.zshrc
+
+function git-root() {
+  if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+    cd `pwd`/`git rev-parse --show-cdup`
+  fi
+}
