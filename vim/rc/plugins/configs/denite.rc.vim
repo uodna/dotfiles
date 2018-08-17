@@ -29,6 +29,9 @@ call denite#custom#source('_', 'sorters', ['sorter_rank'])
 call denite#custom#source('file_old', 'converters', ['converter_relative_word'])
 call denite#custom#source('file_old', 'matchers', ['matcher_project_files', 'matcher_cpsm'])
 
+call denite#custom#source('file_mru', 'converters', ['converter_relative_word'])
+call denite#custom#source('file_mru', 'matchers', ['matcher_project_files', 'matcher_cpsm'])
+
 call denite#custom#option('default', 'highlight_mode_insert', 'Visual')
 call denite#custom#option('default', 'highlight_mode_normal', 'Visual')
 call denite#custom#option('default', 'highlight_matched_char', 'Constant')
