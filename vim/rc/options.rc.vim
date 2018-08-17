@@ -5,7 +5,7 @@ set inccommand=split
 set iskeyword+=-
 set mouse=a
 set noswapfile
-set nowrapscan
+set wrapscan
 set scrolloff=8
 set smartcase
 set splitbelow

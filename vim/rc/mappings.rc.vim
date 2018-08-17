@@ -12,9 +12,9 @@ vnoremap < <gv
 vnoremap Y y`]
 inoremap <C-c> <ESC>
 
-map /  <Plug>(incsearch-forward)\v
+map /  <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-fuzzy-/)
-map g/ <Plug>(incsearch-stay)\v
+map g/ <Plug>(incsearch-stay)
 map n  <Plug>(incsearch-nohl-n)
 map N  <Plug>(incsearch-nohl-N)
 map *  <Plug>(incsearch-nohl-*)
