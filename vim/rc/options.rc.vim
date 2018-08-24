@@ -7,6 +7,7 @@ set mouse=a
 set noswapfile
 set wrapscan
 set scrolloff=8
+set sh=bash
 set smartcase
 set splitbelow
 set splitright
