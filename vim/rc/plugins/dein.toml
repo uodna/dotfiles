@@ -180,7 +180,7 @@ hook_add = '''
 [[plugins]]
 repo = 'haya14busa/incsearch.vim'
 hook_add = '''
-  let g:incsearch#auto_nohlsearch = 1
+  let g:incsearch#auto_nohlsearch = 0
   let g:incsearch#emacs_like_keymap = 1
   let g:incsearch#magic = '\v'
   augroup incsearch-keymap
