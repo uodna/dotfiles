@@ -32,3 +32,4 @@ export XDG_CONFIG_HOME=$HOME/.config
 
 # less
 export MANPAGER=less
+export BAT_THEME="TwoDark"
