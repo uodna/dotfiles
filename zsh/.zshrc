@@ -183,3 +183,8 @@ function git-root() {
     cd `pwd`/`git rev-parse --show-cdup`
   fi
 }
+
+# Autostart if not already in tmux.
+if [[ ! -n $TMUX ]]; then
+  tmux attach || tmux new
+fi
