@@ -20,7 +20,6 @@ path=(
   $HOME/go/bin
   $HOME/bin
   /usr/local/opt/mysql@5.6/bin
-  /usr/local/share/git-core/contrib/diff-highlight
   /usr/local/bin
   $path
 )
