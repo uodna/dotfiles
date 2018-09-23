@@ -2,7 +2,6 @@
 ./emacs/.spacemacs ~/.spacemacs
 
 ./karabiner ~/.config/karabiner
-./peco ~/.peco
 ./zsh/.zshrc ~/.zshrc
 ./zsh/.zshenv ~/.zshenv
 ./zsh/.zsh ~/.zsh
