@@ -13,3 +13,4 @@
 ./etc/.lesskey ~/.lesskey
 ./etc/.less ~/.less
 ./etc/kitty.conf ~/.config/kitty/kitty.conf
+./etc/gitconfig ~/.gitconfig

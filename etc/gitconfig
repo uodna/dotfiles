@@ -1,0 +1,44 @@
+[core]
+  excludesfile = ~/.gitignore
+  autocrlf = input
+  editor = nvim
+  pager = diff-so-fancy | less --tabs=4 -RFX
+[color]
+  ui = auto
+[status]
+  diff = auto
+[branch]
+  diff = auto
+[alias]
+  aa = add --all
+  b = branch
+  branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
+  cm = commit
+  co = checkout
+  gr = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
+  s = status
+[push]
+  default = current
+[fetch]
+  prune = true
+[pull]
+  ff = only
+[diff]
+  colorMoved = zebra
+  compactionHeuristic = true
+[rebase]
+  autosquash = true
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
+[color "diff"]
+  meta = yellow
+  frag = magenta bold
+  commit = yellow bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
+[include]
+  path = ~/.gitconfig.local
