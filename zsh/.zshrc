@@ -124,13 +124,6 @@ if [[ -f ~/.zplug/init.zsh ]]; then
     #    fi
     #fi
     zplug load # --verbose
-
-    if zplug check joel-porquet/zsh-dircolors-solarized; then
-      setupsolarized dircolors.ansi-dark
-      if [ -n "$LS_COLORS" ]; then
-        zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
-      fi
-    fi
 fi
 
 # fzf
