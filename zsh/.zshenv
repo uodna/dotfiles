@@ -30,6 +30,6 @@ export EDITOR=nvim
 export BUNDLER_EDITOR=nvim
 export XDG_CONFIG_HOME=$HOME/.config
 
-# less
-export MANPAGER=less
+# misc
+export MANPAGER="nvim -c 'set ft=man' -"
 export BAT_THEME="TwoDark"
