@@ -97,13 +97,13 @@ alias -g Y='| pbcopy'
 alias -g F='| fzf'
 
 # anyenv
-eval "$(anyenv init -)"
+eval "$(anyenv init - zsh)"
 
 # pyenv-virtualenv
 eval "$(pyenv virtualenv-init -)"
 
 # rust
-source $HOME/.cargo/env
+[ -f ~/.cargo/env ] && source ~/.cargo/env
 
 # direnv
 eval "$(direnv hook zsh)"
