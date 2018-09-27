@@ -1,8 +1,11 @@
+[init]
+  templatedir = ~/.git_template
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
   editor = nvim
   pager = diff-so-fancy | less --tabs=4 -RFX
+  quotepath = false
 [color]
   ui = auto
 [status]
@@ -15,7 +18,9 @@
   branches = for-each-ref --sort=-committerdate --format=\"%(color:blue)%(authordate:relative)\t%(color:red)%(authorname)\t%(color:white)%(color:bold)%(refname:short)\" refs/remotes
   cm = commit
   co = checkout
+  empty = commit --allow-empty -m 'first commit'
   gr = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
+  rtu = reset --hard @{upstream}
   s = status
 [push]
   default = current
@@ -28,6 +33,7 @@
   compactionHeuristic = true
 [rebase]
   autosquash = true
+  keepEmpty = true
 [color "diff-highlight"]
   oldNormal = red bold
   oldHighlight = red bold 52
