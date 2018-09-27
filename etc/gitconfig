@@ -30,7 +30,7 @@
   ff = only
 [diff]
   colorMoved = zebra
-  compactionHeuristic = true
+  indentHeuristic = true
 [rebase]
   autosquash = true
   keepEmpty = true
