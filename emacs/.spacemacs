@@ -346,5 +346,6 @@ you should place your code here."
  ;; If there is more than one, they won't work right.
  )
 
+(add-hook 'terraform-mode-hook #'terraform-format-on-save-mode)
 (modify-syntax-entry ?_ "w")
 (modify-syntax-entry ?- "w")
