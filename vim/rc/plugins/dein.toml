@@ -296,3 +296,9 @@ hook_add = '''
 
 [[plugins]]
 repo = 'terryma/vim-multiple-cursors'
+
+[[plugins]]
+repo = 'haya14busa/vim-migemo'
+
+[[plugins]]
+repo = 'haya14busa/incsearch-migemo.vim'

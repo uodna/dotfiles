@@ -21,6 +21,9 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
+map m/ <Plug>(incsearch-migemo-/)
+map m? <Plug>(incsearch-migemo-?)
+map mg/ <Plug>(incsearch-migemo-stay)
 nnoremap <silent> <ESC> :<C-u>nohlsearch<CR>
 nnoremap <silent> <C-c> :<C-u>nohlsearch<CR>
 
