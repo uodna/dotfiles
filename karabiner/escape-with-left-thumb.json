@@ -1,0 +1,32 @@
+{
+  "title": "Escape with left thumb",
+  "rules": [
+    {
+      "description": "Post escape key when left command key pressed alone",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "left_command",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_command",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "escape"
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
