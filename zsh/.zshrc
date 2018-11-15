@@ -90,6 +90,7 @@ alias tkt='tk ~/tmp/`date +"%Y%m%d"`'
 alias tm='tmux attach || tmux new'
 alias top='glances'
 alias v='nvim'
+alias maxima='rlwrap maxima'
 
 # global alias
 alias -g G='| grep'
