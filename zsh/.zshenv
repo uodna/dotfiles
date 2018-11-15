@@ -20,6 +20,7 @@ path=(
   $HOME/go/bin
   $HOME/bin
   /usr/local/opt/mysql@5.6/bin
+  /usr/local/opt/avr-gcc@7/bin
   /usr/local/bin
   $path
 )
