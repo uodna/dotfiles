@@ -1,6 +1,5 @@
 #env
 LESS = -i -q -x2 -R
-LESSOPEN = | src-hilite-lesspipe.sh %s
 
 #line-edit
 ^B    left
