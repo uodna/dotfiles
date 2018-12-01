@@ -32,3 +32,4 @@ export XDG_CONFIG_HOME=$HOME/.config
 # misc
 export MANPAGER="nvim -c 'set ft=man' -"
 export BAT_THEME="TwoDark"
+export BAT_PAGER="less -R"
