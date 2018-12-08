@@ -64,9 +64,9 @@ add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ":chpwd:*" recent-dirs-default true
 
 # alias
+alias b='bat --plain --paging=never'
 alias be='bundle exec'
 alias c='cdr $(cdr -l | fzf --height 60% --nth 2.. | awk '\''{print $1}'\'')'
-alias cat='bat --plain --paging=never'
 alias cp='cp -i'
 alias d='docker'
 alias dc='docker-compose'
