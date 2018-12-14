@@ -99,7 +99,7 @@ alias -g Y='| pbcopy'
 alias -g F='| fzf'
 
 # anyenv
-eval "$(anyenv init - zsh)"
+eval "$(anyenv init - --no-rehash zsh)"
 
 # pyenv-virtualenv
 eval "$(pyenv virtualenv-init -)"
