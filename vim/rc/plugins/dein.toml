@@ -157,7 +157,7 @@ repo = 'xolox/vim-session'
 hook_add = 'source ~/.config/nvim/rc/plugins/configs/vim-session.rc.vim'
 
 [[plugins]]
-repo = 'uodna/vim-open-github'
+repo = 'k0kubun/vim-open-github'
 
 [[plugins]]
 repo = 'godlygeek/tabular'
