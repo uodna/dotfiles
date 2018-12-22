@@ -1,4 +1,4 @@
-set clipboard=unnamed
+set clipboard^=unnamedplus
 " set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set ignorecase
 set inccommand=split
