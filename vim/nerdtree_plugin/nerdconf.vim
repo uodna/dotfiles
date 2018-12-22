@@ -1,4 +1,7 @@
+let NERDTreeAutoDeleteBuffer=1
 let NERDTreeIgnore=['\.git$[[dir]]', '\.DS_Store$[[file]]', '\.vimsessions$[[dir]]']
+let NERDTreeMinimalUI=1
+let NERDTreeShowHidden=1
 
 call NERDTreeAddKeyMap({
   \ 'key': 'gg',
