@@ -23,14 +23,14 @@ call denite#custom#map('insert', '<C-f>', '<Right>')
 call denite#custom#map('insert', '<C-a>', '<S-Left>')
 call denite#custom#map('insert', '<C-e>', '<S-Right>')
 
-call denite#custom#source('_', 'matchers', ['matcher_cpsm'])
+call denite#custom#source('_', 'matchers', ['matcher/fuzzy'])
 call denite#custom#source('_', 'sorters', ['sorter_rank'])
 
 call denite#custom#source('file_old', 'converters', ['converter_relative_word'])
-call denite#custom#source('file_old', 'matchers', ['matcher_project_files', 'matcher_cpsm'])
+call denite#custom#source('file_old', 'matchers', ['matcher_project_files', 'matcher/fuzzy'])
 
 call denite#custom#source('file_mru', 'converters', ['converter_relative_word'])
-call denite#custom#source('file_mru', 'matchers', ['matcher_project_files', 'matcher_cpsm'])
+call denite#custom#source('file_mru', 'matchers', ['matcher_project_files', 'matcher/fuzzy'])
 
 call denite#custom#option('default', 'highlight_mode_insert', 'Visual')
 call denite#custom#option('default', 'highlight_mode_normal', 'Visual')
