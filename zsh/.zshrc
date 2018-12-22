@@ -73,6 +73,7 @@ alias dc='docker-compose'
 alias diff='diff -U2'
 alias dircolors='gdircolors'
 alias g='cd $(ghq root)/$(ghq list | fzf)'
+alias gg='ghq get -p'
 alias gr='git-root'
 alias h="fc -Dlt '%F %T' 1" # historyに日付を表示
 alias j='z'
