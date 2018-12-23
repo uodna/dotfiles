@@ -38,14 +38,14 @@ call denite#custom#option('default', 'highlight_matched_char', 'Constant')
 call denite#custom#option('default', 'highlight_matched_range', 'Constant')
 call denite#custom#option('default', 'vertical_preview', 1)
 
-noremap <silent> <Leader>p :<C-u>Denite file_rec/git<CR>
-noremap <silent> <Leader>P :<C-u>Denite -auto-preview file_rec/git<CR>
-noremap <silent> <Leader>f :<C-u>Denite file_rec<CR>
-noremap <silent> <Leader>o :<C-u>Denite file_old<CR>
-noremap <silent> <Leader>j :<C-u>Denite -immediately -cusor-pos=+1 file_old<CR>
-noremap <silent> <Leader>g :<C-u>Denite -no-empty grep<CR>
-noremap <silent> <Leader>G :<C-u>Denite -auto-preview -no-empty grep<CR>
-noremap <silent> <Leader>r :<C-u>Denite -resume<CR>
+" noremap <silent> <Leader>p :<C-u>Denite file_rec/git<CR>
+" noremap <silent> <Leader>P :<C-u>Denite -auto-preview file_rec/git<CR>
+" noremap <silent> <Leader>f :<C-u>Denite file_rec<CR>
+" noremap <silent> <Leader>o :<C-u>Denite file_old<CR>
+" noremap <silent> <Leader>j :<C-u>Denite -immediately -cusor-pos=+1 file_old<CR>
+noremap <silent> <Leader>f :<C-u>Denite -no-empty grep<CR>
+" noremap <silent> <Leader>G :<C-u>Denite -auto-preview -no-empty grep<CR>
+" noremap <silent> <Leader>r :<C-u>Denite -resume<CR>
 noremap <silent> <C-h> :<C-u>Denite -resume -immediately -cursor-pos=-1<CR>
 noremap <silent> <C-l> :<C-u>Denite -resume -immediately -cursor-pos=+1<CR>
 noremap <silent> <Leader>w :<C-u>DeniteCursorWord grep<CR>

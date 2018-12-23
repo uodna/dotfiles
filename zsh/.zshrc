@@ -131,7 +131,11 @@ fi
 
 # fzf
 if [[ -f ~/.fzf.zsh ]]; then
-  export FZF_DEFAULT_COMMAND='fd --type f'
+  # export FZF_DEFAULT_COMMAND='fd --type f'
+  export FZF_DEFAULT_COMMAND='
+  (git ls-tree -r --name-only HEAD ||
+   fd --type f --hidden --follow --exclude .git) 2> /dev/null'
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
   export FZF_DEFAULT_OPTS='--reverse --inline-info'
   export FZF_CTRL_T_OPTS="--select-1 --exit-0 --preview '(highlight -O ansi -l {} 2> /dev/null || cat {} || tree -C {}) 2> /dev/null | head -200'"
   export FZF_CTRL_R_OPTS="--with-nth 2.. --height 60% --preview 'echo {}' --preview-window down:3:wrap --bind '?:toggle-preview'"

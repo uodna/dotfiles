@@ -26,6 +26,16 @@ repo = 'Shougo/denite.nvim'
 hook_source = 'source ~/.config/nvim/rc/plugins/configs/denite.rc.vim'
 
 [[plugins]]
+repo = 'junegunn/fzf'
+build = './install --bin'
+merged = 0
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
+hook_source = 'source ~/.config/nvim/rc/plugins/configs/fzf.rc.vim'
+
+[[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_source = 'source ~/.config/nvim/rc/plugins/configs/lightline.rc.vim'
 
@@ -207,7 +217,7 @@ hook_add = '''
   let g:indent_guides_enable_on_vim_startup = 1
   let g:indent_guides_start_level = 2
   let g:indent_guides_guide_size = 1
-  let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'neoterm', 'mundo']
+  let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'neoterm', 'mundo', 'fzf', 'man']
 '''
 
 [[plugins]]
