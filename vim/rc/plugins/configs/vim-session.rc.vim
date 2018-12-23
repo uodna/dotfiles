@@ -10,6 +10,7 @@ function! s:ConfigureSessionAutoSave()
   let g:session_autoload = 'yes'
   " 1分間に1回自動保存
   let g:session_autosave_periodic = 1
+  let g:session_autosave_silent = 1
   " fontとcolor設定を再読込する
   let g:session_persist_font = 0
   let g:session_persist_colors = 0
