@@ -186,6 +186,19 @@ function git-root() {
   fi
 }
 
+# coinbase/assume-role
+if type assume-role > /dev/null; then
+  source $(which assume-role)
+
+  # AWS ACCOUNT NAME
+  function aws_account_info {
+    [ "$AWS_ACCOUNT_NAME" ] && [ "$AWS_ACCOUNT_ROLE" ] && echo "%F{blue}(%f%F{red}$AWS_ACCOUNT_NAME:$AWS_ACCOUNT_ROLE%f%F{blue}):%F$reset_color"
+  }
+
+  # )ofni_tnuocca_swa($ is $(aws_account_info) backwards
+  PROMPT=`echo $PROMPT | rev | sed 's/ / )ofni_tnuocca_swa($ /'| rev`
+fi
+
 # Autostart if not already in tmux.
 if [[ ! -n $TMUX ]]; then
   tmux attach || tmux new
