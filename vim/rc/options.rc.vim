@@ -1,7 +1,6 @@
-set clipboard^=unnamedplus
+set clipboard^=unnamed
 " set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set ignorecase
-set inccommand=split
 set iskeyword+=-
 set mouse=a
 set noswapfile
@@ -12,3 +11,7 @@ set smartcase
 set splitbelow
 set splitright
 set undofile
+
+if has('nvim')
+  set inccommand=split
+endif
