@@ -10,7 +10,7 @@ set sh=bash
 set smartcase
 set splitbelow
 set splitright
-set undodir=~/.vim/undo
+set undodir=~/.cache/undo
 set undofile
 
 if has('nvim')
