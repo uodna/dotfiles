@@ -50,14 +50,12 @@ let g:NERDTreeMapPreviewVSplit='gv'
 noremap <silent> <Leader>u :<C-u>MundoToggle<CR>
 
 function! s:tig()
-  :tabnew
-  :terminal tig
+  :tab terminal ++close tig
   :startinsert
 endfunction
 
 function! s:tigthis(path)
-  :tabnew
-  execute 'terminal tig' expand(a:path)
+  execute 'tab terminal ++close tig' expand(a:path)
   :startinsert
 endfunction
 
