@@ -96,6 +96,15 @@ tnoremap <M-t> <C-\><C-N><C-w>t
 tnoremap <M-b> <C-\><C-N><C-w>b
 tnoremap <M-p> <C-\><C-N><C-w>p
 tnoremap <M-c> <C-\><C-N><C-w>c
+tnoremap <Esc>h <C-\><C-N><C-w>h
+tnoremap <Esc>j <C-\><C-N><C-w>j
+tnoremap <Esc>k <C-\><C-N><C-w>k
+tnoremap <Esc>l <C-\><C-N><C-w>l
+tnoremap <Esc>w <C-\><C-N><C-w>w
+tnoremap <Esc>t <C-\><C-N><C-w>t
+tnoremap <Esc>b <C-\><C-N><C-w>b
+tnoremap <Esc>p <C-\><C-N><C-w>p
+tnoremap <Esc>c <C-\><C-N><C-w>c
 
 inoremap <M-h> <C-\><C-N><C-w>h
 inoremap <M-j> <C-\><C-N><C-w>j
@@ -106,6 +115,15 @@ inoremap <M-t> <C-\><C-N><C-w>t
 inoremap <M-b> <C-\><C-N><C-w>b
 inoremap <M-p> <C-\><C-N><C-w>p
 inoremap <M-c> <C-\><C-N><C-w>c
+inoremap <Esc>h <C-\><C-N><C-w>h
+inoremap <Esc>j <C-\><C-N><C-w>j
+inoremap <Esc>k <C-\><C-N><C-w>k
+inoremap <Esc>l <C-\><C-N><C-w>l
+inoremap <Esc>w <C-\><C-N><C-w>w
+inoremap <Esc>t <C-\><C-N><C-w>t
+inoremap <Esc>b <C-\><C-N><C-w>b
+inoremap <Esc>p <C-\><C-N><C-w>p
+inoremap <Esc>c <C-\><C-N><C-w>c
 
 nnoremap <M-h> <C-w>h
 nnoremap <M-j> <C-w>j
@@ -116,6 +134,15 @@ nnoremap <M-t> <C-w>t
 nnoremap <M-b> <C-w>b
 nnoremap <M-p> <C-w>p
 nnoremap <M-c> <C-w>c
+nnoremap <Esc>h <C-w>h
+nnoremap <Esc>j <C-w>j
+nnoremap <Esc>k <C-w>k
+nnoremap <Esc>l <C-w>l
+nnoremap <Esc>w <C-w>w
+nnoremap <Esc>t <C-w>t
+nnoremap <Esc>b <C-w>b
+nnoremap <Esc>p <C-w>p
+nnoremap <Esc>c <C-w>c
 
 nnoremap <silent> <C-a> :tabNext<CR>
 nnoremap <silent> <C-w>n :vnew<CR>
