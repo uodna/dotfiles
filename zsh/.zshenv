@@ -25,12 +25,12 @@ path=(
 )
 
 # neovim
-export EDITOR=nvim
-export BUNDLER_EDITOR=nvim
+export EDITOR=vim
+export BUNDLER_EDITOR=vim
 export XDG_CONFIG_HOME=$HOME/.config
 
 # misc
-export MANPAGER="nvim -c 'set ft=man' -"
+export MANPAGER="vim -c MANPAGER -"
 export BAT_THEME="1337"
 export BAT_PAGER="less -R"
 export HOMEBREW_NO_INSTALL_CLEANUP=1

@@ -91,7 +91,7 @@ alias tf='terraform'
 alias tkt='tk ~/tmp/`date +"%Y%m%d"`'
 alias tm='tmux attach || tmux new'
 alias top='glances'
-alias v='nvim'
+alias v='vim'
 alias maxima='rlwrap maxima'
 
 # global alias
