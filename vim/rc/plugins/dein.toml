@@ -7,7 +7,6 @@ hook_add = 'source ~/.config/nvim/rc/plugins/configs/dein.rc.vim'
 repo = 'morhetz/gruvbox'
 hook_add = '''
   let g:gruvbox_contrast_dark = 'medium'
-  let g:gruvbox_italic = 1
   let g:gruvbox_invert_selection = 0
 '''
 
