@@ -1,4 +1,5 @@
 set clipboard&
+set clipboard^=unnamed
 set clipboard^=unnamedplus
 " set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set ignorecase
@@ -7,7 +8,7 @@ set mouse=a
 set noswapfile
 set wrapscan
 set scrolloff=8
-set sh=bash
+set sh=zsh
 set smartcase
 set splitbelow
 set splitright

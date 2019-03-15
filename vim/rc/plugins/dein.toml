@@ -38,11 +38,11 @@ hook_source = 'source ~/.config/nvim/rc/plugins/configs/fzf.rc.vim'
 repo = 'itchyny/lightline.vim'
 hook_source = 'source ~/.config/nvim/rc/plugins/configs/lightline.rc.vim'
 
-[[plugins]]
-repo = 'Shougo/neomru.vim'
-
-[[plugins]]
-repo = 'Shougo/neoyank.vim'
+# [[plugins]]
+# repo = 'Shougo/neomru.vim'
+#
+# [[plugins]]
+# repo = 'Shougo/neoyank.vim'
 
 [[plugins]]
 repo = 'w0rp/ale'
@@ -60,9 +60,9 @@ hook_source = '''
   nnoremap <leader>ap :ALEPreviousWrap<cr>
 '''
 
-[[plugins]]
-repo = 'nixprime/cpsm'
-build = 'PY3=ON sh install.sh'
+# [[plugins]]
+# repo = 'nixprime/cpsm'
+# build = 'PY3=ON sh install.sh'
 
 [[plugins]]
 repo = 'scrooloose/nerdtree'
@@ -228,11 +228,11 @@ repo = 'bronson/vim-trailing-whitespace'
 [[plugins]]
 repo = 'glidenote/memolist.vim'
 
-[[plugins]]
-repo = 'luochen1990/rainbow'
-hook_add = '''
-  let g:rainbow_active = 1
-'''
+# [[plugins]]
+# repo = 'luochen1990/rainbow'
+# hook_add = '''
+#   let g:rainbow_active = 1
+# '''
 
 [[plugins]]
 repo = 'prabirshrestha/async.vim'
