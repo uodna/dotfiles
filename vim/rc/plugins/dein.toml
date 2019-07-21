@@ -312,3 +312,9 @@ repo = 'haya14busa/vim-migemo'
 
 [[plugins]]
 repo = 'haya14busa/incsearch-migemo.vim'
+
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
