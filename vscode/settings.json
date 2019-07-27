@@ -1,0 +1,36 @@
+{
+    // editor
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "breadcrumbs.enabled": true,
+    // vim
+    "vim.debug.loggingLevelForConsole": "debug",
+    "vim.autoindent": true,
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.leader": "<space>",
+    "vim.smartcase": true,
+    "vim.useSystemClipboard":true,
+    "vim.visualstar": true,
+    "vim.useCtrlKeys": true,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.duration": 300,
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    // vim emulated plugins
+    "vim.easymotion": true,
+    "vim.surround": true,
+    "vim.camelCaseMotion.enable": true,
+    // vim mappings
+    "vim.normalModeKeyBindingsNonRecursive": [
+        { "before": [";"], "after": [":"] },
+        // { "before": ["x"], "after": ["_x"] },
+        // { "before": ["alt+j"], "after": ["<C-w>", "j"] },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // Bind p in visual mode to paste without overriding the current register
+        { "before": [ "p", ], "after": [ "p", "g", "v", "y" ] },
+    ],
+}
