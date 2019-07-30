@@ -34,3 +34,4 @@ export MANPAGER="nvim -c 'set ft=man' -"
 export BAT_THEME="1337"
 export BAT_PAGER="less -R"
 export HOMEBREW_NO_INSTALL_CLEANUP=1
+export TIME_STYLE="long-iso"
