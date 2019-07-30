@@ -19,19 +19,19 @@ on_ft = 'toml'
 repo = 'tmux-plugins/vim-tmux'
 on_ft = 'tmux'
 
-[[plugins]]
-repo = 'rust-lang/rust.vim'
-on_ft = 'rust'
-hook_add = '''
-  let g:rustfmt_autosave = 1
-'''
-
-[[plugins]]
-repo = 'racer-rust/vim-racer'
-on_ft = 'rust'
-hook_add = '''
-  let g:racer_experimental_completer = 1
-'''
+# [[plugins]]
+# repo = 'rust-lang/rust.vim'
+# on_ft = 'rust'
+# hook_add = '''
+#   let g:rustfmt_autosave = 1
+# '''
+#
+# [[plugins]]
+# repo = 'racer-rust/vim-racer'
+# on_ft = 'rust'
+# hook_add = '''
+#   let g:racer_experimental_completer = 1
+# '''
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
@@ -40,21 +40,25 @@ hook_add = '''
   let g:javascript_plugin_flow = 1
 '''
 
-[[plugins]]
-repo = 'rhysd/vim-clang-format'
-on_ft = 'c'
-hook_add = '''
-  let g:clang_format#code_style = 'mozilla'
-  let g:clang_format#auto_format = 1
-'''
-
-[[plugins]]
-repo = 'ruby-formatter/rufo-vim'
-on_ft = 'ruby'
-hook_add = '''
-  let g:rufo_auto_formatting = 0
-'''
+# [[plugins]]
+# repo = 'rhysd/vim-clang-format'
+# on_ft = 'c'
+# hook_add = '''
+#   let g:clang_format#code_style = 'mozilla'
+#   let g:clang_format#auto_format = 1
+# '''
+#
+# [[plugins]]
+# repo = 'ruby-formatter/rufo-vim'
+# on_ft = 'ruby'
+# hook_add = '''
+#   let g:rufo_auto_formatting = 0
+# '''
 
 [[plugins]]
 repo = 'Glench/Vim-Jinja2-Syntax'
 on_ft = 'jinja'
+
+[[plugins]]
+repo = 'martinda/Jenkinsfile-vim-syntax'
+on_ft = 'Jenkinsfile'

@@ -102,9 +102,9 @@ hook_add = '''
 [[plugins]]
 repo = 'kana/vim-textobj-user'
 
-[[plugins]]
-repo = 'rhysd/vim-textobj-ruby'
-on_ft = 'ruby'
+# [[plugins]]
+# repo = 'rhysd/vim-textobj-ruby'
+# on_ft = 'ruby'
 
 [[plugins]]
 repo = 'kana/vim-operator-user'
@@ -211,23 +211,23 @@ repo = 'haya14busa/incsearch-fuzzy.vim'
 [[plugins]]
 repo = 'haya14busa/incsearch-easymotion.vim'
 
-[[plugins]]
-repo = 'nathanaelkane/vim-indent-guides'
-hook_add = '''
-  let g:indent_guides_enable_on_vim_startup = 1
-  let g:indent_guides_start_level = 2
-  let g:indent_guides_guide_size = 1
-  let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'neoterm', 'mundo', 'fzf', 'man']
-'''
+# [[plugins]]
+# repo = 'nathanaelkane/vim-indent-guides'
+# hook_add = '''
+#   let g:indent_guides_enable_on_vim_startup = 1
+#   let g:indent_guides_start_level = 2
+#   let g:indent_guides_guide_size = 1
+#   let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'neoterm', 'mundo', 'fzf', 'man']
+# '''
 
-[[plugins]]
-repo = 'vim-scripts/AnsiEsc.vim'
+# [[plugins]]
+# repo = 'vim-scripts/AnsiEsc.vim'
 
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
 
-[[plugins]]
-repo = 'glidenote/memolist.vim'
+# [[plugins]]
+# repo = 'glidenote/memolist.vim'
 
 [[plugins]]
 repo = 'luochen1990/rainbow'
@@ -238,31 +238,31 @@ hook_add = '''
 [[plugins]]
 repo = 'prabirshrestha/async.vim'
 
-[[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-hook_add = '''
-  let g:lsp_async_completion = 0
-
-  function! s:find_root_uri(filename) abort
-    let l:buffer_filename = lsp#utils#find_nearest_parent_file_directory(
-    \   lsp#utils#get_buffer_path(),
-    \   a:filename,
-    \ )
-
-    return lsp#utils#path_to_uri(l:buffer_filename)
-  endfunction
-
-  if executable('flow-language-server')
-    autocmd User lsp_setup call lsp#register_server({
-    \   'name': 'flow-language-server',
-    \   'cmd': { server_info ->
-    \     [&shell, &shellcmdflag, 'flow-language-server --stdio --try-flow-bin']
-    \   },
-    \   'root_uri': { server_info -> s:find_root_uri('.flowconfig') },
-    \   'whitelist': ['javascript'],
-    \ })
-  endif
-'''
+# [[plugins]]
+# repo = 'prabirshrestha/vim-lsp'
+# hook_add = '''
+#   let g:lsp_async_completion = 0
+#
+#   function! s:find_root_uri(filename) abort
+#     let l:buffer_filename = lsp#utils#find_nearest_parent_file_directory(
+#     \   lsp#utils#get_buffer_path(),
+#     \   a:filename,
+#     \ )
+#
+#     return lsp#utils#path_to_uri(l:buffer_filename)
+#   endfunction
+#
+#   if executable('flow-language-server')
+#     autocmd User lsp_setup call lsp#register_server({
+#     \   'name': 'flow-language-server',
+#     \   'cmd': { server_info ->
+#     \     [&shell, &shellcmdflag, 'flow-language-server --stdio --try-flow-bin']
+#     \   },
+#     \   'root_uri': { server_info -> s:find_root_uri('.flowconfig') },
+#     \   'whitelist': ['javascript'],
+#     \ })
+#   endif
+# '''
 
 [[plugins]]
 repo = 'pangloss/vim-javascript'
