@@ -13,11 +13,14 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=1000000
 export SAVEHIST=1000000
 
+# go
+export GOPATH=$HOME/go
+
 path=(
   $HOME/.anyenv/bin
   $HOME/.cargo/bin
   $HOME/.tfenv/bin
-  $HOME/go/bin
+  $GOPATH/bin
   $HOME/bin
   /usr/local/opt/mysql@5.6/bin
   /usr/local/bin
