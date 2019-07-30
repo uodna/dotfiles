@@ -35,6 +35,7 @@ setopt magic_equal_subst
 
 setopt print_eight_bit
 setopt extended_glob
+setopt interactivecomments
 
 # 区切り文字の設定
 autoload -Uz select-word-style
