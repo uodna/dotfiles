@@ -101,13 +101,6 @@ alias -g G='| grep'
 alias -g L='| less'
 alias -g Y='| pbcopy'
 alias -g F='| fzf'
-
-# anyenv
-eval "$(anyenv init - --no-rehash zsh)"
-
-# pyenv-virtualenv
-eval "$(pyenv virtualenv-init -)"
-
 # rust
 [ -f ~/.cargo/env ] && source ~/.cargo/env
 
@@ -192,3 +185,10 @@ function git-root() {
 if [[ ! -n $TMUX ]]; then
   tmux attach || tmux new
 fi
+
+# anyenv
+eval "$(anyenv init - --no-rehash zsh)"
+
+# pyenv-virtualenv
+eval "$(pyenv virtualenv-init -)"
+
