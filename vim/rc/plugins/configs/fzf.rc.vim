@@ -32,6 +32,13 @@ command! -bang -nargs=* FzfRgSimple
   \ call fzf#vim#grep(
   \   'rg --column  --line-number --hidden --no-heading --color=always --smart-case '.shellescape(<q-args>), 1, {'--d': ':', '--nth': '2..'}, <bang>0)
 
-noremap <silent> <Leader>p :<C-u>FzfFilesPreview<CR>
-noremap <silent> <Leader>g :<C-u>FzfRgPreview<CR>
-noremap <silent> <Leader>o :<C-u>FzfHistory<CR>
+function! FZFOpen(command_str)
+  if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
+    exe "normal! \<c-w>\<c-w>"
+  endif
+  exe 'normal! ' . a:command_str . "\<cr>"
+endfunction
+
+noremap <silent> <Leader>p :<C-u> call FZFOpen(':FzfFilesPreview')<CR>
+noremap <silent> <Leader>g :<C-u> call FZFOpen(':FzfRgPreview')<CR>
+noremap <silent> <Leader>o :<C-u> call FZFOpen(':FzfHistory')<CR>
