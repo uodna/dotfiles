@@ -5,6 +5,7 @@ let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 let g:fzf_buffers_jump = 1
 let g:fzf_layout = { 'down': '~40%' }
+let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 " Files command with preview window
 command! -bang -nargs=? -complete=dir FzfFilesPreview
