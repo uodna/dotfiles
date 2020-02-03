@@ -19,18 +19,12 @@ command! -bang -nargs=* FzfRgPreview
   \           : fzf#vim#with_preview('right:50%', 'ctrl-l'),
   \   <bang>0)
 
-" broken
-command! -bang -nargs=* FzfAgRaw
+command! -bang -nargs=* FzfRgPreviewInPath
   \ call fzf#vim#grep(
-  \   'ag --column --line-number --hidden --no-heading --color --smart-case --nobreak '.shellescape(<q-args>), 1,
+  \   'rg --column --line-number --hidden --no-heading --color=always --smart-case -e "" '.shellescape(<q-args>), 2,
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \           : fzf#vim#with_preview('right:50%', 'ctrl-l'),
   \   <bang>0)
-
-" broken
-command! -bang -nargs=* FzfRgSimple
-  \ call fzf#vim#grep(
-  \   'rg --column  --line-number --hidden --no-heading --color=always --smart-case '.shellescape(<q-args>), 1, {'--d': ':', '--nth': '2..'}, <bang>0)
 
 function! FZFOpen(command_str)
   if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
