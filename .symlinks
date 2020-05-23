@@ -14,3 +14,4 @@
 ./etc/.less ~/.less
 ./etc/kitty.conf ~/.config/kitty/kitty.conf
 ./etc/gitconfig ~/.gitconfig
+./etc/i3-config ~/.config/i3/config
