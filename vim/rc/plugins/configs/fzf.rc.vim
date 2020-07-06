@@ -14,14 +14,21 @@ command! -bang -nargs=? -complete=dir FzfFilesPreview
 " Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
 command! -bang -nargs=* FzfRgPreview
   \ call fzf#vim#grep(
-  \   'rg --column --line-number --hidden --no-heading --color=always --smart-case '.shellescape(<q-args>), 2,
+  \   'rg --column --line-number --hidden --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1,
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%', 'ctrl-l'),
   \   <bang>0)
 
 command! -bang -nargs=* FzfRgPreviewInPath
   \ call fzf#vim#grep(
-  \   'rg --column --line-number --hidden --no-heading --color=always --smart-case -e "" '.shellescape(<q-args>), 2,
+  \   'rg --column --line-number --hidden --no-heading --color=always --smart-case -e "" -- '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%', 'ctrl-l'),
+  \   <bang>0)
+
+command! -bang -nargs=* FzfRgPreviewWord
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --hidden --no-heading --color=always --smart-case -- '.shellescape(expand("<cword>")), 1,
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%', 'ctrl-l'),
   \   <bang>0)
@@ -36,3 +43,4 @@ endfunction
 noremap <silent> <Leader>p :<C-u> call FZFOpen(':FzfFilesPreview')<CR>
 noremap <silent> <Leader>g :<C-u> call FZFOpen(':FzfRgPreview')<CR>
 noremap <silent> <Leader>o :<C-u> call FZFOpen(':FzfHistory')<CR>
+noremap <silent> <Leader>w :<C-u> call FZFOpen(':FzfRgPreviewWord')<CR>

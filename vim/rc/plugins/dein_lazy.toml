@@ -62,3 +62,10 @@ on_ft = 'jinja'
 [[plugins]]
 repo = 'martinda/Jenkinsfile-vim-syntax'
 on_ft = 'Jenkinsfile'
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+on_ft = 'markdown'
+hook_add = '''
+  let g:vim_markdown_folding_disabled = 1
+'''

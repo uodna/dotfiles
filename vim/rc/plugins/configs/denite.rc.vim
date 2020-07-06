@@ -48,7 +48,7 @@ noremap <silent> <Leader>f :<C-u>Denite -no-empty grep<CR>
 " noremap <silent> <Leader>r :<C-u>Denite -resume<CR>
 noremap <silent> <C-h> :<C-u>Denite -resume -immediately -cursor-pos=-1<CR>
 noremap <silent> <C-l> :<C-u>Denite -resume -immediately -cursor-pos=+1<CR>
-noremap <silent> <Leader>w :<C-u>DeniteCursorWord grep<CR>
+" noremap <silent> <Leader>w :<C-u>DeniteCursorWord grep<CR>
 noremap <silent> <Leader>y :<C-u>Denite neoyank<CR>
 noremap <silent> <Leader>l :<C-u>Denite line<CR>
 noremap <silent> <Leader>b :<C-u>Denite buffer<CR>

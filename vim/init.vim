@@ -59,3 +59,5 @@ call s:source_rc('mappings.rc.vim')
 call s:source_rc('options.rc.vim')
 
 command! -nargs=1 -complete=file Rename f <args>|call delete(expand('#'))
+
+command! DeleteAnsi %s/<1b>\[[0-9;]*m//g

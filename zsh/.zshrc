@@ -74,11 +74,11 @@ alias dc='docker-compose'
 alias diff='diff -U2'
 alias dircolors='gdircolors'
 alias foreman='goreman'
-alias g='cd $(ghq root)/$(ghq list | fzf)'
+alias g='cd $(ghq root)/$(ghq list | fzf) && tmux rename-window ${PWD##*/}'
 alias gg='ghq get -p'
 alias gr='git-root'
 alias h="fc -Dlt '%F %T' 1" # historyに日付を表示
-alias j='z'
+alias j='z && tmux rename-window ${PWD##*/}'
 alias kk='clear && tmux clear-history'
 alias la='ls -la'
 alias less='bat --paging=always'
@@ -189,6 +189,6 @@ function git-root() {
 }
 
 # Autostart if not already in tmux.
-if [[ ! -n $TMUX ]]; then
+if [[ ! -n $TMUX ]] && [[ ! -n $DO_NOT_USE_TMUX ]]; then
   tmux attach || tmux new
 fi

@@ -156,8 +156,8 @@ hook_source = '''
 [[plugins]]
 repo = 'neoclide/vim-easygit'
 
-[[plugins]]
-repo = 'neoclide/denite-git'
+# [[plugins]]
+# repo = 'neoclide/denite-git'
 
 [[plugins]]
 repo = 'xolox/vim-misc'
@@ -169,8 +169,8 @@ hook_add = 'source ~/.config/nvim/rc/plugins/configs/vim-session.rc.vim'
 [[plugins]]
 repo = 'k0kubun/vim-open-github'
 
-[[plugins]]
-repo = 'godlygeek/tabular'
+# [[plugins]]
+# repo = 'godlygeek/tabular'
 
 [[plugins]]
 repo = 'machakann/vim-highlightedyank'
@@ -208,8 +208,8 @@ hook_add = '''
 [[plugins]]
 repo = 'haya14busa/incsearch-fuzzy.vim'
 
-[[plugins]]
-repo = 'haya14busa/incsearch-easymotion.vim'
+# [[plugins]]
+# repo = 'haya14busa/incsearch-easymotion.vim'
 
 # [[plugins]]
 # repo = 'nathanaelkane/vim-indent-guides'
@@ -220,8 +220,8 @@ repo = 'haya14busa/incsearch-easymotion.vim'
 #   let g:indent_guides_exclude_filetypes = ['help', 'nerdtree', 'neoterm', 'mundo', 'fzf', 'man']
 # '''
 
-# [[plugins]]
-# repo = 'vim-scripts/AnsiEsc.vim'
+[[plugins]]
+repo = 'vim-scripts/AnsiEsc.vim'
 
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
@@ -275,40 +275,49 @@ hook_add = '''
     \ }
 '''
 
-[[plugins]]
-repo = 'thinca/vim-quickrun'
-hook_add = '''
-  nnoremap <silent> <Leader>qr :<C-u>QuickRun<CR>
-  nnoremap <silent> <Leader>ql :<C-u>QuickRun ruby.rspec.line<CR>
-  nnoremap <silent> <Leader>qq :<C-u>bw! \[quickrun\ output\]<CR>
-  let g:quickrun_config = {
-  \   '_': {
-  \     'runner': 'vimproc',
-  \     'runner/vimproc/updatetime': 100,
-  \     'outputter' : 'buffer',
-  \     'outputter/buffer/close_on_empty' : 1,
-  \   },
-  \   'ruby.rspec': {
-  \     'exec': 'rspec %s %o -fd --tty',
-  \   },
-  \   'ruby.rspec.line': {
-  \     'command': 'rspec',
-  \     'exec': 'rspec %s:%{line(".")} %o -fd --tty',
-  \   },
-  \ }
-'''
+# [[plugins]]
+# repo = 'thinca/vim-quickrun'
+# hook_add = '''
+#   nnoremap <silent> <Leader>qr :<C-u>QuickRun<CR>
+#   nnoremap <silent> <Leader>ql :<C-u>QuickRun ruby.rspec.line<CR>
+#   nnoremap <silent> <Leader>qq :<C-u>bw! \[quickrun\ output\]<CR>
+#   let g:quickrun_config = {
+#   \   '_': {
+#   \     'runner': 'vimproc',
+#   \     'runner/vimproc/updatetime': 100,
+#   \     'outputter' : 'buffer',
+#   \     'outputter/buffer/close_on_empty' : 1,
+#   \   },
+#   \   'ruby.rspec': {
+#   \     'exec': 'rspec %s %o -fd --tty',
+#   \   },
+#   \   'ruby.rspec.line': {
+#   \     'command': 'rspec',
+#   \     'exec': 'rspec %s:%{line(".")} %o -fd --tty',
+#   \   },
+#   \ }
+# '''
+
+# [[plugins]]
+# repo = 'hashivim/vim-terraform'
+# hook_add = '''
+#   let g:terraform_fmt_on_save = 1
+# '''
+
+# [[plugins]]
+# repo = 'terryma/vim-multiple-cursors'
+#
+# [[plugins]]
+# repo = 'haya14busa/vim-migemo'
+#
+# [[plugins]]
+# repo = 'haya14busa/incsearch-migemo.vim'
 
 [[plugins]]
-repo = 'hashivim/vim-terraform'
-hook_add = '''
-  let g:terraform_fmt_on_save = 1
-'''
+repo = 'andymass/vim-matchup'
 
-[[plugins]]
-repo = 'terryma/vim-multiple-cursors'
-
-[[plugins]]
-repo = 'haya14busa/vim-migemo'
-
-[[plugins]]
-repo = 'haya14busa/incsearch-migemo.vim'
+# https://qiita.com/coil_msp123/items/29de76b035dd28af77a9
+# [[plugins]]
+# repo = 'neoclide/coc.nvim'
+# rev = 'release'
+# merged = '0'

@@ -17,13 +17,13 @@ export SAVEHIST=1000000
 export GOPATH=$HOME/go
 
 path=(
+  /usr/local/bin
   $HOME/.anyenv/bin
   $HOME/.cargo/bin
   $HOME/.tfenv/bin
   $GOPATH/bin
   $HOME/bin
   /usr/local/opt/mysql@5.6/bin
-  /usr/local/bin
   $path
 )
 
@@ -38,3 +38,4 @@ export BAT_THEME="1337"
 export BAT_PAGER="less -R"
 export HOMEBREW_NO_INSTALL_CLEANUP=1
 export TIME_STYLE="long-iso"
+export PURE_PROMPT_SYMBOL="$"

@@ -124,3 +124,4 @@ nnoremap <C-w>t <C-w>T
 
 nmap <silent> <leader>d <Plug>DashSearch
 
+" cnoremap w!! w !sudo tee > /dev/null %<CR>
